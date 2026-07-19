@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Time Calculator – Add or Subtract Days, Hours &amp; Minutes</title>
+  <meta name="description" content="Add or subtract days, hours, and minutes from any date and time. A fast, free time calculator designed to work in just a few taps.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#3157d5">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Time Calculator – Add or Subtract Time">
+  <meta property="og:description" content="Add or subtract time in just a few taps. No sign-up and no time zone setup.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Time Calculator",
+    "description": "A free calculator for adding or subtracting days, hours, and minutes from a date and time.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires JavaScript",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#calculator">Skip to calculator</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Time Calculator home">
+        <span class="brand-mark" aria-hidden="true">
+          <span class="brand-hand"></span>
+        </span>
+        <span>Time Calculator</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#how-it-works">How it works</a>
+        <a href="#faq">FAQ</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container" aria-labelledby="page-title">
+      <p class="eyebrow">Free online tool</p>
+      <h1 id="page-title">Add or subtract time in a few taps</h1>
+      <p class="hero-copy">Start from now, choose a shortcut, and get the answer instantly. No sign-up or time zone setup.</p>
+    </section>
+
+    <div class="container calculator-layout">
+      <section class="calculator-card" id="calculator" aria-label="Time calculator">
+        <div class="mode-switch" role="group" aria-label="Choose whether to add or subtract time">
+          <button class="mode-button is-active" type="button" data-mode="add" aria-pressed="true">
+            <span aria-hidden="true">＋</span>
+            Add time
+          </button>
+          <button class="mode-button" type="button" data-mode="subtract" aria-pressed="false">
+            <span aria-hidden="true">−</span>
+            Subtract time
+          </button>
+        </div>
+
+        <div class="calculator-section start-section">
+          <div class="section-heading">
+            <span class="section-label">Starting from</span>
+            <span class="section-note" id="start-summary">Local time</span>
+          </div>
+          <div class="choice-row" role="group" aria-label="Choose the starting date and time">
+            <button class="choice-button is-active" id="start-now" type="button" aria-pressed="true">
+              <span class="choice-icon" aria-hidden="true">◷</span>
+              Now
+            </button>
+            <button class="choice-button" id="start-custom" type="button" aria-pressed="false">
+              <span class="choice-icon" aria-hidden="true">▦</span>
+              Pick date &amp; time
+            </button>
+          </div>
+          <div class="date-time-fields" id="date-time-fields" hidden>
+            <label>
+              <span>Date</span>
+              <input type="date" id="start-date">
+            </label>
+            <label>
+              <span>Time</span>
+              <input type="time" id="start-time" step="60">
+            </label>
+          </div>
+        </div>
+
+        <div class="calculator-section">
+          <div class="section-heading">
+            <span class="section-label">How much time?</span>
+            <span class="section-note">Tap a shortcut</span>
+          </div>
+          <div class="quick-grid" role="group" aria-label="Common durations">
+            <button type="button" class="quick-button" data-days="0" data-minutes="15" aria-pressed="false">15 min</button>
+            <button type="button" class="quick-button" data-days="0" data-minutes="30" aria-pressed="false">30 min</button>
+            <button type="button" class="quick-button is-active" data-days="0" data-minutes="60" aria-pressed="true">1 hour</button>
+            <button type="button" class="quick-button" data-days="0" data-minutes="120" aria-pressed="false">2 hours</button>
+            <button type="button" class="quick-button" data-days="0" data-minutes="480" aria-pressed="false">8 hours</button>
+            <button type="button" class="quick-button" data-days="1" data-minutes="0" aria-pressed="false">1 day</button>
+          </div>
+        </div>
+
+        <details class="custom-duration">
+          <summary>
+            <span>Custom duration</span>
+            <span class="summary-hint">Days, hours &amp; minutes</span>
+          </summary>
+          <div class="stepper-grid">
+            <div class="stepper" data-unit="days">
+              <span class="stepper-label">Days</span>
+              <div class="stepper-controls">
+                <button type="button" data-step="-1" aria-label="Remove one day">−</button>
+                <input class="duration-input" id="days-value" type="number" inputmode="numeric" min="0" max="9999" step="1" value="0" data-unit="days" aria-label="Days">
+                <button type="button" data-step="1" aria-label="Add one day">＋</button>
+              </div>
+            </div>
+            <div class="stepper" data-unit="hours">
+              <span class="stepper-label">Hours</span>
+              <div class="stepper-controls">
+                <button type="button" data-step="-1" aria-label="Remove one hour">−</button>
+                <input class="duration-input" id="hours-value" type="number" inputmode="numeric" min="0" max="9999" step="1" value="1" data-unit="hours" aria-label="Hours">
+                <button type="button" data-step="1" aria-label="Add one hour">＋</button>
+              </div>
+            </div>
+            <div class="stepper" data-unit="minutes">
+              <span class="stepper-label">Minutes</span>
+              <div class="stepper-controls">
+                <button type="button" data-step="-5" aria-label="Remove five minutes">−</button>
+                <input class="duration-input" id="minutes-value" type="number" inputmode="numeric" min="0" max="9999" step="1" value="0" data-unit="minutes" aria-label="Minutes">
+                <button type="button" data-step="5" aria-label="Add five minutes">＋</button>
+              </div>
+            </div>
+          </div>
+          <p class="hold-hint">Tap, press and hold, or type any number — 90 minutes works.</p>
+        </details>
+
+        <section class="result-panel" aria-labelledby="result-heading" aria-live="polite" aria-atomic="true">
+          <p class="result-kicker" id="result-heading">One hour from now</p>
+          <output class="result-primary" id="result-primary">Loading local time…</output>
+          <p class="result-full" id="result-full"></p>
+          <div class="result-actions">
+            <button class="primary-button" id="copy-result" type="button">
+              <span aria-hidden="true">□</span>
+              <span class="copy-label">Copy result</span>
+            </button>
+            <button class="secondary-button" id="continue-result" type="button">
+              Continue from here
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </section>
+
+        <p class="local-note">Uses the date and time on your device. No time zone conversion.</p>
+        <noscript><p class="noscript-message">JavaScript is required to use this calculator.</p></noscript>
+      </section>
+
+      <aside class="ad-slot ad-rail" aria-label="Advertisement">
+        <span>ADVERTISEMENT</span>
+        <strong>300 × 250</strong>
+      </aside>
+    </div>
+
+    <section class="content-section container" id="how-it-works" aria-labelledby="how-title">
+      <div class="section-intro">
+        <p class="eyebrow">How it works</p>
+        <h2 id="how-title">A simpler way to calculate time</h2>
+        <p>Choose whether to add or subtract, start from now or pick a date, then tap a duration. Your result updates immediately.</p>
+      </div>
+      <div class="steps-grid">
+        <article>
+          <span class="step-number">1</span>
+          <h3>Choose a direction</h3>
+          <p>Add time to find a future result, or subtract it to look back.</p>
+        </article>
+        <article>
+          <span class="step-number">2</span>
+          <h3>Tap a duration</h3>
+          <p>Use a popular shortcut or open custom duration for an exact amount.</p>
+        </article>
+        <article>
+          <span class="step-number">3</span>
+          <h3>Use the result</h3>
+          <p>Copy it, or continue calculating from the resulting date and time.</p>
+        </article>
+      </div>
+    </section>
+
+    <aside class="ad-slot ad-banner container" aria-label="Advertisement">
+      <span>ADVERTISEMENT</span>
+      <strong>Responsive banner</strong>
+    </aside>
+
+    <section class="content-section container popular-section" aria-labelledby="popular-title">
+      <div class="section-intro compact">
+        <p class="eyebrow">Popular calculations</p>
+        <h2 id="popular-title">Common time questions</h2>
+      </div>
+      <div class="popular-grid">
+        <button type="button" data-popular-mode="add" data-popular-days="0" data-popular-minutes="480">What time is 8 hours from now?</button>
+        <button type="button" data-popular-mode="subtract" data-popular-days="0" data-popular-minutes="120">What time was it 2 hours ago?</button>
+        <button type="button" data-popular-mode="add" data-popular-days="0" data-popular-minutes="45">Add 45 minutes to the current time</button>
+        <button type="button" data-popular-mode="add" data-popular-days="7" data-popular-minutes="0">What date is one week from now?</button>
+      </div>
+    </section>
+
+    <section class="content-section container faq-section" id="faq" aria-labelledby="faq-title">
+      <div class="section-intro compact">
+        <p class="eyebrow">FAQ</p>
+        <h2 id="faq-title">Frequently asked questions</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>Can I add more than 24 hours?</summary>
+          <p>Yes. Open custom duration and add any combination of days, hours, and minutes.</p>
+        </details>
+        <details>
+          <summary>What happens when the result crosses midnight?</summary>
+          <p>The calculator automatically moves to the correct previous or next calendar date.</p>
+        </details>
+        <details>
+          <summary>Does this calculator support leap years?</summary>
+          <p>Yes. It uses your browser’s calendar system, including leap years and the correct number of days in each month.</p>
+        </details>
+        <details>
+          <summary>Does it convert between time zones?</summary>
+          <p>No. This version performs ordinary date and time calculations using your device’s local time.</p>
+        </details>
+        <details>
+          <summary>Are my dates and times saved?</summary>
+          <p>No. The calculation happens in your browser, and this version does not send or store the dates and times you enter.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="brand footer-brand" href="index.html">Time Calculator</a>
+        <p>Fast, focused date and time arithmetic.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="about.html">About</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+      <p class="copyright">© <span id="current-year">2026</span> Time Calculator</p>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
