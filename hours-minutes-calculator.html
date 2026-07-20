@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hours &amp; Minutes Calculator – Add or Subtract Durations</title>
+  <meta name="description" content="Add or subtract multiple hours and minutes. Get the result as H:MM, total minutes, and decimal hours with this free duration calculator.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#3157d5">
+  <link rel="canonical" href="https://timecalc.top/hours-minutes-calculator">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Time Calculator">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Hours &amp; Minutes Calculator – Add or Subtract Durations">
+  <meta property="og:description" content="Add or subtract multiple hours and minutes, then see the result in three useful formats.">
+  <meta property="og:url" content="https://timecalc.top/hours-minutes-calculator">
+  <meta property="og:image" content="https://timecalc.top/og.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1731">
+  <meta property="og:image:height" content="909">
+  <meta property="og:image:alt" content="Hours and minutes duration calculator">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hours &amp; Minutes Calculator">
+  <meta name="twitter:description" content="Add or subtract durations and convert the result to H:MM, total minutes, or decimal hours.">
+  <meta name="twitter:image" content="https://timecalc.top/og.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://timecalc.top/hours-minutes-calculator#webapplication",
+        "url": "https://timecalc.top/hours-minutes-calculator",
+        "name": "Hours & Minutes Calculator",
+        "description": "A free calculator for adding and subtracting multiple time durations in hours and minutes.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a time duration?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A duration is an amount of elapsed time, such as 2 hours and 30 minutes. It is not a specific time of day."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I add more than two durations?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Add as many rows as you need and choose whether each duration should be added or subtracted."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can the minutes value be greater than 59?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. For example, entering 90 minutes is automatically treated as 1 hour and 30 minutes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How are decimal hours calculated?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The calculator divides the total number of minutes by 60. For example, 7 hours and 15 minutes equals 7.25 decimal hours."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does this calculator handle dates or time zones?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. It works only with elapsed durations. Use the main Time Calculator to add or subtract time from a date or clock time."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#duration-calculator">Skip to calculator</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Time Calculator home">
+        <span class="brand-mark" aria-hidden="true">
+          <span class="brand-hand"></span>
+        </span>
+        <span>Time Calculator</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/">Date &amp; time</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#faq">FAQ</a>
+        <a href="/about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero duration-hero container" aria-labelledby="page-title">
+      <p class="eyebrow">Free duration tool</p>
+      <h1 id="page-title">Hours &amp; Minutes Calculator</h1>
+      <p class="hero-copy">Add or subtract multiple elapsed time durations. Get the answer as hours and minutes, total minutes, and decimal hours.</p>
+    </section>
+
+    <div class="container calculator-layout duration-layout">
+      <section class="calculator-card duration-calculator-card" id="duration-calculator" aria-label="Hours and minutes calculator">
+        <div class="section-heading duration-section-heading">
+          <div>
+            <p class="duration-card-title">Build your calculation</p>
+            <p class="duration-card-copy">Tap a shortcut or adjust any row. You can also type a value such as 90 minutes.</p>
+          </div>
+          <button class="text-button" id="reset-durations" type="button">Reset</button>
+        </div>
+
+        <div class="duration-quick-grid" role="group" aria-label="Quickly add a duration">
+          <button type="button" class="quick-button" data-quick-hours="0" data-quick-minutes="15">+ 15 min</button>
+          <button type="button" class="quick-button" data-quick-hours="0" data-quick-minutes="30">+ 30 min</button>
+          <button type="button" class="quick-button" data-quick-hours="1" data-quick-minutes="0">+ 1 hour</button>
+          <button type="button" class="quick-button" data-quick-hours="8" data-quick-minutes="0">+ 8 hours</button>
+        </div>
+
+        <div class="duration-list" id="duration-list" aria-label="Durations to calculate"></div>
+
+        <button class="add-duration-button" id="add-duration" type="button">
+          <span aria-hidden="true">+</span>
+          Add another duration
+        </button>
+
+        <section class="result-panel duration-result-panel" aria-labelledby="duration-result-heading">
+          <p class="result-kicker" id="duration-result-heading">Total duration</p>
+          <output class="result-primary duration-result-primary" id="duration-result-hmm" aria-live="polite" aria-atomic="true">1:30</output>
+          <div class="duration-result-grid">
+            <div class="duration-metric">
+              <span>Total minutes</span>
+              <strong id="duration-result-minutes">90</strong>
+            </div>
+            <div class="duration-metric">
+              <span>Decimal hours</span>
+              <strong id="duration-result-decimal">1.50</strong>
+            </div>
+          </div>
+          <div class="result-actions">
+            <button class="primary-button" id="copy-duration-result" type="button">
+              <span aria-hidden="true">▣</span>
+              <span class="copy-label">Copy result</span>
+            </button>
+          </div>
+        </section>
+
+        <p class="local-note">Minutes over 59 are normalized automatically. Results may be negative.</p>
+        <noscript><p class="noscript-message">JavaScript is required to use the interactive calculator. The instructions and examples below remain available.</p></noscript>
+      </section>
+
+      <aside class="ad-slot ad-rail" aria-label="Advertisement">
+        <span>ADVERTISEMENT</span>
+        <strong>300 × 250</strong>
+      </aside>
+    </div>
+
+    <section class="content-section container" id="how-it-works" aria-labelledby="how-title">
+      <div class="section-intro">
+        <p class="eyebrow">How it works</p>
+        <h2 id="how-title">Add and subtract elapsed time</h2>
+        <p>Each row is one duration. Choose whether to add or subtract it, then read the combined result in the format you need.</p>
+      </div>
+      <div class="steps-grid">
+        <article>
+          <span class="step-number">1</span>
+          <h3>Enter a duration</h3>
+          <p>Set the hours and minutes. Values such as 90 minutes are accepted.</p>
+        </article>
+        <article>
+          <span class="step-number">2</span>
+          <h3>Choose plus or minus</h3>
+          <p>Keep Add for a positive duration, or switch a row to Subtract.</p>
+        </article>
+        <article>
+          <span class="step-number">3</span>
+          <h3>Use any result format</h3>
+          <p>Copy H:MM, total minutes, and decimal hours together in one tap.</p>
+        </article>
+      </div>
+    </section>
+
+    <aside class="ad-slot ad-banner container" aria-label="Advertisement">
+      <span>ADVERTISEMENT</span>
+      <strong>Responsive banner</strong>
+    </aside>
+
+    <section class="content-section container" aria-labelledby="examples-title">
+      <div class="section-intro compact">
+        <p class="eyebrow">Examples</p>
+        <h2 id="examples-title">Common duration calculations</h2>
+      </div>
+      <div class="examples-grid">
+        <article class="example-card">
+          <strong>2:35 + 1:50 = 4:25</strong>
+          <p>265 total minutes, or 4.42 decimal hours.</p>
+        </article>
+        <article class="example-card">
+          <strong>8:00 − 0:45 = 7:15</strong>
+          <p>435 total minutes, or 7.25 decimal hours.</p>
+        </article>
+        <article class="example-card">
+          <strong>1:20 + 0:55 + 2:10 = 4:25</strong>
+          <p>Three positive durations can be combined in one calculation.</p>
+        </article>
+        <article class="example-card">
+          <strong>0:30 − 1:15 = −0:45</strong>
+          <p>A larger subtraction produces a negative result.</p>
+        </article>
+      </div>
+      <div class="formula-card">
+        <div>
+          <p class="eyebrow">The formula</p>
+          <h3>Convert everything to minutes first</h3>
+        </div>
+        <p>Multiply each hours value by 60, add its minutes, and apply the plus or minus sign. Divide the final total by 60 for decimal hours; divide with a remainder for H:MM.</p>
+      </div>
+    </section>
+
+    <section class="content-section container related-tool-section" aria-labelledby="related-title">
+      <a class="tool-link-card" href="/">
+        <span>
+          <span class="eyebrow">Related tool</span>
+          <strong id="related-title">Need a date or clock-time result?</strong>
+          <span>Use the main Time Calculator to add or subtract days, hours, and minutes from now or from a chosen date.</span>
+        </span>
+        <span class="tool-link-arrow" aria-hidden="true">→</span>
+      </a>
+    </section>
+
+    <section class="content-section container faq-section" id="faq" aria-labelledby="faq-title">
+      <div class="section-intro compact">
+        <p class="eyebrow">FAQ</p>
+        <h2 id="faq-title">Hours and minutes questions</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>What is a time duration?</summary>
+          <p>A duration is an amount of elapsed time, such as 2 hours and 30 minutes. It is not a specific time of day.</p>
+        </details>
+        <details>
+          <summary>Can I add more than two durations?</summary>
+          <p>Yes. Add as many rows as you need, and choose whether each duration should be added or subtracted.</p>
+        </details>
+        <details>
+          <summary>Can the minutes value be greater than 59?</summary>
+          <p>Yes. For example, entering 90 minutes is automatically treated as 1 hour and 30 minutes.</p>
+        </details>
+        <details>
+          <summary>How are decimal hours calculated?</summary>
+          <p>The calculator divides the total number of minutes by 60. For example, 7 hours and 15 minutes equals 7.25 decimal hours.</p>
+        </details>
+        <details>
+          <summary>Does this calculator handle dates or time zones?</summary>
+          <p>No. It works only with elapsed durations. Use the <a href="/">main Time Calculator</a> when you need to add or subtract time from a date or clock time.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="brand footer-brand" href="/">Time Calculator</a>
+        <p>Fast, focused date and time arithmetic.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="/hours-minutes-calculator" aria-current="page">Hours &amp; Minutes</a>
+        <a href="/about">About</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+      </nav>
+      <p class="copyright">© <span id="current-year">2026</span> Time Calculator</p>
+    </div>
+  </footer>
+
+  <script src="/duration-calculator.js" defer></script>
+</body>
+</html>
