@@ -469,6 +469,49 @@ h1 {
   font-size: 0.9rem;
 }
 
+.from-now-start {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 24px;
+  padding: 14px 16px;
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.from-now-start > div {
+  display: grid;
+  gap: 2px;
+}
+
+.from-now-start strong {
+  font-size: 1.08rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.compact-button {
+  min-height: 42px;
+  padding: 7px 13px;
+  white-space: nowrap;
+}
+
+.from-now-presets {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.from-now-inputs {
+  padding-bottom: 0;
+}
+
+.from-now-explanation {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 .duration-section-heading {
   align-items: flex-start;
   margin-bottom: 18px;
@@ -874,7 +917,8 @@ h1 {
   gap: 12px;
 }
 
-.popular-grid button {
+.popular-grid button,
+.popular-grid a {
   min-height: 64px;
   padding: 13px 16px;
   color: var(--ink);
@@ -884,15 +928,18 @@ h1 {
   font-weight: 700;
   text-align: left;
   cursor: pointer;
+  text-decoration: none;
 }
 
-.popular-grid button::after {
+.popular-grid button::after,
+.popular-grid a::after {
   float: right;
   color: var(--primary);
   content: "→";
 }
 
-.popular-grid button:hover {
+.popular-grid button:hover,
+.popular-grid a:hover {
   border-color: rgba(49, 87, 213, 0.4);
   background: var(--primary-soft);
 }
@@ -953,6 +1000,12 @@ h1 {
 
 .related-tool-section {
   padding-bottom: 80px;
+}
+
+.related-tools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
 }
 
 .tool-link-card {
@@ -1110,6 +1163,28 @@ h1 {
   color: var(--primary-dark);
 }
 
+.error-main {
+  display: grid;
+  align-items: center;
+}
+
+.error-card {
+  text-align: left;
+}
+
+.error-card > p:not(.eyebrow) {
+  max-width: 610px;
+  color: var(--muted);
+}
+
+.error-actions a {
+  text-decoration: none;
+}
+
+.error-actions .primary-button {
+  color: #ffffff;
+}
+
 @media (max-width: 900px) {
   .calculator-layout {
     grid-template-columns: 1fr;
@@ -1154,8 +1229,13 @@ h1 {
   .duration-row-fields,
   .duration-result-grid,
   .examples-grid,
-  .formula-card {
+  .formula-card,
+  .related-tools-grid {
     grid-template-columns: 1fr;
+  }
+
+  .from-now-presets {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .duration-row {
@@ -1200,6 +1280,10 @@ h1 {
   }
 
   .result-actions > button {
+    width: 100%;
+  }
+
+  .error-actions > a {
     width: 100%;
   }
 
@@ -1275,3 +1359,4 @@ h1 {
     transition-duration: 0.01ms !important;
   }
 }
+
