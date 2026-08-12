@@ -228,12 +228,801 @@
     const totalMin = ranges.reduce((sum, item) => sum + item.min, 0);
     const totalExpected = ranges.reduce((sum, item) => sum + item.expected, 0);
     const totalMax = ranges.reduce((sum, item) => sum + item.max, 0);
-    const anchor = new Date(}yïMt¶‰Ëkºwµçwšâš–k~—¦OVg’ê–’k–ÂGòO–Ë‰õô°(€€€€€ì‰ÑåÁ”ˆè‰EÕ•ÍÑ¥½¸ˆ°‰¹…µ”ˆè‹–Kš:£îOšzs–>¿’î—¢Ş£–"Ã–&7’â–’§–B_¾ò|ˆ°‰…•ÁÑ•‘¹Íİ•Èˆéì‰ÑåÁ”ˆè‰¹Íİ•Èˆ°‰Ñ•áĞˆè‹–>¿’î—¢.—n»š‚š^Û¦^Ó¢úš^§š&¦rš^Û¦Vÿ¢ú¦Vÿ¾ò3îOšzs’òkšb;†»š‚¢ºÃ’âëšb£–’§š"[šnÓš^§š^—šr‰õô(€€€uô(€uô(€€ğ½ÍÉ¥ÁĞø(ğ½¡•…ø(ñ‰½‘äø(€€ñ„±…ÍÌô‰Í­¥Àµ±¥¹¬ˆ¡É•˜ôˆ…±Õ±…Ñ½Èˆû¢ŞÏ–"Ã¢º‡º_–f ğ½„ø(€€ñ¡•…‘•È±…ÍÌô‰Í¥Ñ”µ¡•…‘•Èˆøñ‘¥Ø±…ÍÌô‰Í¥Ñ”µ¡•…‘•É}}¥¹¹•Èˆøñ„±…ÍÌô‰‰É…¹ˆ¡É•˜ôˆ¸¸¼ˆøñÍÁ…¸±…ÍÌô‰‰É…¹‘}}µ…É¬ˆ…É¥„µ¡¥‘‘•¸ô‰ÑÉÕ”ˆûŠ^Üğ½ÍÁ…¸øñÍÁ…¸ûº_–"Ã–ƒ
-ä€ñÍÁ…¸±…ÍÌô‰‰É…¹‘}}ÍÕ™™¥àˆû
-Üƒš^Û¦^Óš:—¦údğ½ÍÁ…¸øğ½ÍÁ…¸øğ½„øñ¹…Ø±…ÍÌô‰Í¥Ñ”µ¹…Øˆ…É¥„µ±…‰•°ô‹’âï¢š–¾ó¢"¨ˆøñ„¡É•˜ôˆ¸¸¼ĞÔµµ¥¹ÕÑ•Ìµ±…Ñ•È¼ˆûš^Û¦^Ó–*ƒ–<ğ½„øñ„¡É•˜ôˆ¸¸½Ñ¥µ”µ¡…¥¸µ…±Õ±…Ñ½È¼ˆû–’kšº×Ò¿¢º„ğ½„øñ„±…ÍÌô‰¹…ØµÁÉ¥½É¥Ñäˆ…É¥„µÕÉÉ•¹Ğô‰Á…”ˆ¡É•˜ôˆ¸¼ˆû–Kš:£š^Û¦^Ğğ½„øñ‰ÕÑÑ½¸±…ÍÌô‰Ñ¡•µ”µÑ½±”ˆÑåÁ”ô‰‰ÕÑÑ½¸ˆ‘…Ñ„µÑ¡•µ”µÑ½±”…É¥„µ±…‰•°ô‹–"š6‹šŞÇ¢&Ëš¢‡–ò<ˆûŠbøğ½‰ÕÑÑ½¸øğ½¹…Øøğ½‘¥Øøğ½¡•…‘•Èø(€€ñ‘¥Ø±…ÍÌô‰Á…”µÍ¡•±°ˆø(€€€€ñÍ•Ñ¥½¸±…ÍÌô‰¡•É¼ˆøñÀ±…ÍÌô‰•å•‰É½Üˆû–Kš:£š^Û¦^Ó¢º‡º_–f ğ½Àøñ Äû–ş¦†ï–ƒ
-ç–"Ã¾ò–Kš:£–ƒ
-ç–ò–,ğ½ ÄøñÀû–#–†¯–g–ş¦†ï–"Ã¢úûš"[îOšvjš^Û¦^Ó¾ò3–7š2'–º{¦f¦†ë–ê?šŞï–*ƒ––’¢Ş¿¢/–J3¦ŠVgš^Û¦VÿöG®g’òk’î;n»š‚š^Û¦^Ó–>7š:£–º3šVÓ¢º‡–"Kğ½ÀøñÀ±…ÍÌô‰¡•É½}}•á…µÁ±”ˆøÄäèÌÃ–"Ã¢úøƒŠ"Hƒ¢Ş¿¢,ĞÃ–"ƒŠ"Hƒ–s¢ö˜ÄÃ–"ƒŠ"Hƒš&/î´ÌÃ–"ƒŠ"Hƒ¦ŠVdÄ×–"€ô€ÄÜèÔ×–ò–,ğ½Àøğ½Í•Ñ¥½¸ø(€€€€ñÍ•Ñ¥½¸±…ÍÌô‰Ñ½½°µ™É…µ”ˆ¥ô‰…±Õ±…Ñ½Èˆ…É¥„µ±…‰•°ô‹–Kš:£š^Û¦^Ó¢º‡º_–f ˆøñ‘¥Ø‘…Ñ„µÑ¥µ”µ¡…¥¸µ…ÁÀ‘…Ñ„µÁÉ•Í•Ğô‰‰…­İ…Éˆøğ½‘¥Øøñ¹½ÍÉ¥ÁĞøñÀ±…ÍÌô‰¹½ÍÉ¥ÁĞµ¹½Ñ”ˆû¢º‡º_–f£¦r¢š–ò–B¼)…Ù…MÉ¥ÁÓ’ë’ú/¾òhÄäèÌÃ–&7–"Ã¢úû¾ò3šïR£š^Øä×–"¦J¾ò3šršfhÄÜèÔ×–ò–/ğ½Àøğ½¹½ÍÉ¥ÁĞøğ½Í•Ñ¥½¸ø(€€€€ñÍ•Ñ¥½¸±…ÍÌô‰½¹Ñ•¹ĞµÍ•Ñ¥½¸ˆøñÀ±…ÍÌô‰•å•‰É½Üˆû–>7–BG–º'š:Hğ½Àøñ Èû’î;’â7¢÷¢ş–"Ãj¦
-’â–"ï–ú–n{º\ğ½ ÈøñÀû–ššzpÄäèÌÃ–ş¦†ï–"Ã¢úû¾ò3¢Ş¿¢,ĞÃ–"¦J–s¢ö˜ÄÃ–"¦J–*{Bš&/î´ÌÃ–"¦J¾ò3–7¦ŠVdÄ×–"¦J¾ò3šï–Ç¦r¢šÇ–Â?š^ØÌ×–"¦J¾ò3–nƒš¶ÄÜèÔ×–êS¢¾—–ò–/’ş»šRç’îïš?’âšº×¾ò3îOšzs’òk®/–6ÏšnÓšZÃğ½Àøñ‘¥Ø±…ÍÌô‰•á…µÁ±”µÉ¥ˆøñ…ÉÑ¥±”±…ÍÌô‰•á…µÁ±”µ…Éˆøñ Ìûn»š‚š^Û¦^Ğğ½ ÌøñÀû–ş¦†ï–"Ã¢úûš"[–º3š"Cjš^Û¦^Ğğ½ÀøñÀ±…ÍÌô‰•á…µÁ±”µÉ•ÍÕ±ĞˆøÄäèÌÀğ½Àøğ½…ÉÑ¥±”øñ…ÉÑ¥±”±…ÍÌô‰•á…µÁ±”µ…Éˆøñ Ìû–£¦£R£š^Øğ½ ÌøñÀøĞÀ€¬€ÄÀ€¬€ÌÀ€¬€Ä×–"¦J|ğ½ÀøñÀ±…ÍÌô‰•á…µÁ±”µÉ•ÍÕ±ĞˆøÇ–Â?š^ØÌ×–"ğ½Àøğ½…ÉÑ¥±”øñ…ÉÑ¥±”±…ÍÌô‰•á…µÁ±”µ…Éˆøñ Ìû–îë¢º»–ò–,ğ½ ÌøñÀûn»š‚š^Û¦^Ó–?–:ï–£¦£R£š^Øğ½ÀøñÀ±…ÍÌô‰•á…µÁ±”µÉ•ÍÕ±ĞˆøÄÜèÔÔğ½Àøğ½…ÉÑ¥±”øğ½‘¥Øøğ½Í•Ñ¥½¸ø(€€€€ñÍ•Ñ¥½¸±…ÍÌô‰½¹Ñ•¹ĞµÍ•Ñ¥½¸ˆøñÀ±…ÍÌô‰•å•‰É½ÜˆûVg–ë’ög¦<ğ½Àøñ Èûš*+Šs¦ŠVgš^Û¦^ÓŠw–6W.³–g–ëšv”ğ½ ÈøñÀûšršfkš^Û¦^Ó–>«’şw¢¾–"k––÷–º3š"C¢ÖÛ¦{šrë¢ÖÓê›–J3¦7¢š¢¾û¢/šr––÷š*+–‚×¢ö›š:K¦bš"[’âÓš^Û–>c–2[’ös’âë.³®/j’âšº×¾ò3¢şgš‚ß¢÷šâš–kr/¢¢«–ŞÇ–"Ã–êWVg’ê–’k–ÂG’ög¦?ğ½ÀøñÀû–ššzsš~Cšº×¢Ş¿¢/–>¿¢÷¦r¢šÌÃ–"ÀÔÃ–"¦J¾ò3–>¿’î—š&O–òŠsš^Û¦^Ó¢2–nÓŠw–Kš:£îOšzs’òk–B3š^Ûšbû’ë¢Ï–š—–ò–/’â;šršfk–ò–/¾ò3¢3’â7šb¿îg’â’â«r/’òóÊû†»jšVÃ–¶_ğ½Àøğ½Í•Ñ¥½¸ø(€€€€ñÍ•Ñ¥½¸±…ÍÌô‰½¹Ñ•¹ĞµÍ•Ñ¥½¸ˆøñÀ±…ÍÌô‰•å•‰É½Üˆû–âã¢¦^»¦Š`ğ½Àøñ Èû–Kš:£š^Û¦^Ó¦^»¦Š`ğ½ Èøñ‘¥Ø±…ÍÌô‰™…Äµ±¥ÍĞˆøñ‘•Ñ…¥±ÌøñÍÕµµ…Éäû–Kš:£š^Û¦^Ó–J3–K¢º‡š^Ûšr'’î’æ#–2ë–"¯¾ò|ğ½ÍÕµµ…ÉäøñÀû–K¢º‡š^Ûšbû’ë¢Şwšïš~C’â«š^Û–"ï¢şcšr'–’k’æ¾òo–Kš:£¢º‡º_š‚çš6»–’k’â«š¶—¦ª“jš^Û¦Vÿ¾ò3º_–ëšršfk–êS¢¾—’öWš^Û–ò–/ğ½Àøğ½‘•Ñ…¥±Ìøñ‘•Ñ…¥±ÌøñÍÕµµ…Éäû¦ŠVgš^Û¦^Ó–êS¢¾—–*ƒ–r£–N«¦3¾ò|ğ½ÍÕµµ…ÉäøñÀû–>¿’î—š*+¦ŠVgš^Û¦^Ó’ös’âë.³®/j’âšº×–*ƒ–—¢şgš‚ßš^‹¢÷r/–"Ã–ş¢šR£š^Û¾ò3’æ¢÷šâš–k~—¦OVg’ê–’k–ÂGòO–Ëğ½Àøğ½‘•Ñ…¥±Ìøñ‘•Ñ…¥±ÌøñÍÕµµ…Éäû–Kš:£îOšzs–>¿’î—¢Ş£–"Ã–&7’â–’§–B_¾ò|ğ½ÍÕµµ…ÉäøñÀû–>¿’î—¢.—n»š‚š^Û¦^Ó¢úš^§š&¦rš^Û¦Vÿ¢ú¦Vÿ¾ò3îOšzs’òkšb;†»š‚¢ºÃ’âëšb£–’§š"[šnÓš^§š^—šrğ½Àøğ½‘•Ñ…¥±Ìøğ½‘¥Øøğ½Í•Ñ¥½¸ø(€€ğ½‘¥Øø(€€ñ™½½Ñ•È±…ÍÌô‰Í¥Ñ”µ™½½Ñ•Èˆøñ‘¥Ø±…ÍÌô‰Í¥Ñ”µ™½½Ñ•É}}¥¹¹•Èˆøñ‘¥ØøñÍÑÉ½¹œûº_–"Ã–ƒ
-äğ½ÍÑÉ½¹œøñ‰Èû–7¢Òçš^Û¦^Ó¢º‡º_–Ş—–Üğ½‘¥Øøñ‘¥Ø±…ÍÌô‰™½½Ñ•Èµ±¥¹­Ìˆøñ„¡É•˜ôˆ¸¸¼ˆû¦š[¦†Ôğ½„øñ„¡É•˜ôˆ¸¸¼ĞÔµµ¥¹ÕÑ•Ìµ±…Ñ•È¼ˆûš^Û¦^Ó–*ƒ–<ğ½„øñ„¡É•˜ôˆ¸¸½Ñ¥µ”µ¡…¥¸µ…±Õ±…Ñ½È¼ˆû–’kšº×Ò¿¢º„ğ½„øğ½‘¥Øøñ‘¥Øû
-¤€ÈÀÈØƒ
-Üƒ–:–z/& ğ½‘¥Øøğ½‘¥Øøğ½™½½Ñ•Èø(€€ñÍÉ¥ÁĞÍÉŒôˆ¸¸½…ÍÍ•ÑÌ½½¹™¥œ¹©Ìˆøğ½ÍÉ¥ÁĞøñÍÉ¥ÁĞÍÉŒôˆ¸¸½…ÍÍ•ÑÌ½…ÁÀ¹©Ìˆøğ½ÍÉ¥ÁĞø(ğ½‰½‘äø(ğ½¡Ñµ°ø(
+    const anchor = new Date(state.anchor);
+    const target = new Date(state.target);
+    const expectedStart = state.mode === "reverse" ? addMinutes(target, -totalExpected) : anchor;
+    let cursor = expectedStart;
+    let cumulativeMin = 0;
+    let cumulativeMax = 0;
+    const rangeStart = state.mode === "reverse" ? addMinutes(target, -totalMax) : anchor;
+    const entries = state.steps.map((item, index) => {
+      const range = ranges[index];
+      const start = cursor;
+      const end = addMinutes(start, range.expected);
+      cumulativeMin += range.min;
+      cumulativeMax += range.max;
+      const entry = {
+        item,
+        range,
+        start,
+        end,
+        earliestBoundary: addMinutes(rangeStart, cumulativeMin),
+        latestBoundary: addMinutes(rangeStart, cumulativeMax)
+      };
+      cursor = end;
+      return entry;
+    });
+
+    if (state.mode === "forward") {
+      return {
+        entries,
+        primary: addMinutes(anchor, totalExpected),
+        earliest: addMinutes(anchor, totalMin),
+        latest: addMinutes(anchor, totalMax),
+        start: anchor,
+        end: addMinutes(anchor, totalExpected),
+        totalMin,
+        totalExpected,
+        totalMax
+      };
+    }
+
+    return {
+      entries,
+      primary: expectedStart,
+      earliest: addMinutes(target, -totalMax),
+      latest: addMinutes(target, -totalMin),
+      start: expectedStart,
+      end: target,
+      totalMin,
+      totalExpected,
+      totalMax
+    };
+  };
+
+  const base64UrlEncode = (value) => {
+    const bytes = encoder.encode(JSON.stringify(value));
+    let binary = "";
+    bytes.forEach((byte) => { binary += String.fromCharCode(byte); });
+    return btoa(binary).replaceAll("+", "-").replaceAll("/", "_").replaceAll("=", "");
+  };
+
+  const base64UrlDecode = (value) => {
+    const normalized = value.replaceAll("-", "+").replaceAll("_", "/");
+    const padded = normalized + "=".repeat((4 - normalized.length % 4) % 4);
+    const binary = atob(padded);
+    const bytes = Uint8Array.from(binary, (char) => char.charCodeAt(0));
+    return JSON.parse(new TextDecoder().decode(bytes));
+  };
+
+  const storageGet = (key, fallback) => {
+    try {
+      const value = localStorage.getItem(key);
+      return value ? JSON.parse(value) : fallback;
+    } catch (_) {
+      return fallback;
+    }
+  };
+
+  const storageSet = (key, value) => {
+    try {
+      localStorage.setItem(key, JSON.stringify(value));
+      return true;
+    } catch (_) {
+      return false;
+    }
+  };
+
+  const getHashState = () => {
+    if (!location.hash.startsWith("#p=")) return null;
+    const payload = location.hash.slice(3);
+    if (!payload || payload.length > 12000) return null;
+    try { return base64UrlDecode(payload); } catch (_) { return null; }
+  };
+
+  const durationFromText = (segment) => {
+    const normalized = normalizeChineseNumbers(segment).replaceAll("ä¸ª", "").replace(/[â€”â€“~ï½]/g, "-");
+    const range = normalized.match(/(\d+(?:\.\d+)?)\s*(?:åˆ°|è‡³|-)\s*(\d+(?:\.\d+)?)\s*(å°æ—¶|æ—¶|h|åˆ†é’Ÿ|åˆ†|min)/i);
+    if (range) {
+      const unit = /å°æ—¶|æ—¶|h/i.test(range[3]) ? 60 : 1;
+      const min = clampMinutes(Number(range[1]) * unit);
+      const max = clampMinutes(Number(range[2]) * unit);
+      return { duration: Math.round((min + max) / 2), min, max, hasRange: true, matched: range[0] };
+    }
+
+    const halfHours = normalized.match(/(\d+(?:\.\d+)?)\s*åŠå°æ—¶/);
+    if (halfHours) {
+      const value = clampMinutes(Number(halfHours[1]) * 60 + 30);
+      return { duration: value, min: value, max: value, hasRange: false, matched: halfHours[0] };
+    }
+
+    if (/åŠå°æ—¶/.test(normalized)) {
+      return { duration: 30, min: 30, max: 30, hasRange: false, matched: "åŠå°æ—¶" };
+    }
+
+    if (/ä¸€åˆ»é’Ÿ/.test(normalized)) {
+      return { duration: 15, min: 15, max: 15, hasRange: false, matched: "ä¸€åˆ»é’Ÿ" };
+    }
+
+    const hours = normalized.match(/(\d+(?:\.\d+)?)\s*(?:å°æ—¶|æ—¶|h)/i);
+    const minutes = normalized.match(/(\d+(?:\.\d+)?)\s*(?:åˆ†é’Ÿ|åˆ†|min)/i);
+    if (hours || minutes) {
+      const value = clampMinutes((hours ? Number(hours[1]) * 60 : 0) + (minutes ? Number(minutes[1]) : 0));
+      const matched = `${hours?.[0] || ""}${minutes?.[0] || ""}`;
+      return { duration: value, min: value, max: value, hasRange: false, matched };
+    }
+
+    return null;
+  };
+
+  const parseStartTime = (text, now = new Date()) => {
+    if (/ç°åœ¨(?:å¼€å§‹)?/.test(text)) return { date: roundToFive(now), matched: text.match(/ç°åœ¨(?:å¼€å§‹)?/)?.[0], note: "å·²æŠŠâ€œç°åœ¨â€å†»ç»“ä¸ºå½“å‰æ—¶é—´ï¼Œä¹‹åä¸ä¼šè‡ªåŠ¨æ¼‚ç§»ã€‚" };
+    const period = text.match(/(å‡Œæ™¨|æ—©ä¸Š|ä¸Šåˆ|ä¸­åˆ|ä¸‹åˆ|å‚æ™š|æ™šä¸Š)?\s*(\d{1,2})\s*(?:[:ï¼šç‚¹æ—¶])\s*(\d{1,2})?\s*åˆ†?/);
+    if (!period) return null;
+    let hour = Number(period[2]);
+    const minute = Number(period[3] || 0);
+    if (hour > 23 || minute > 59) return { invalid: true, matched: period[0], note: `æ— æ³•è¯†åˆ«æ—¶é—´â€œ${period[0].trim()}â€ã€‚` };
+    const marker = period[1] || "";
+    if (/ä¸‹åˆ|å‚æ™š|æ™šä¸Š/.test(marker) && hour < 12) hour += 12;
+    if (/å‡Œæ™¨/.test(marker) && hour === 12) hour = 0;
+    if (/ä¸­åˆ/.test(marker) && hour < 11) hour += 12;
+    let date = atToday(hour, minute, now);
+    let note = "";
+    if (!marker && hour <= 12) {
+      if (date <= now) date = addMinutes(date, 12 * 60);
+      if (date <= now) date = addMinutes(date, 12 * 60);
+      note = `â€œ${period[0].trim()}â€æŒ‰ä¸‹ä¸€æ¬¡å‡ºç°çš„ ${formatDateTime(date)} å¤„ç†ï¼Œå¯åœ¨ä¸Šæ–¹ä¿®æ”¹ã€‚`;
+    }
+    return { date, matched: period[0], note };
+  };
+
+  const stripDurationText = (text) => String(text)
+    .replace(/\d+(?:\.\d+)?\s*(?:åˆ°|è‡³|-|â€”|â€“|~|ï½)\s*\d+(?:\.\d+)?\s*(?:å°æ—¶|æ—¶|h|åˆ†é’Ÿ|åˆ†|min)/gi, "")
+    .replace(/\d+(?:\.\d+)?\s*ä¸ª?åŠ(?:ä¸ª)?å°æ—¶/gi, "")
+    .replace(/åŠå°æ—¶|ä¸€åˆ»é’Ÿ/g, "")
+    .replace(/\d+(?:\.\d+)?\s*(?:å°æ—¶|æ—¶|h)/gi, "")
+    .replace(/\d+(?:\.\d+)?\s*(?:åˆ†é’Ÿ|åˆ†|min)/gi, "");
+
+  const parseNaturalText = (text) => {
+    const input = normalizeChineseNumbers(String(text || "").trim().slice(0, 3000));
+    const start = parseStartTime(input);
+    const rawSegments = input.split(/[ï¼Œ,ã€ï¼›;ã€‚\n]|(?:\s*(?:â†’|->)\s*)/).map((part) => part.trim()).filter(Boolean);
+    const parsedSteps = [];
+    const unrecognized = [];
+
+    rawSegments.forEach((segment) => {
+      const segmentWithoutStart = segment.replace(start?.matched || "", "").trim();
+      const duration = durationFromText(segmentWithoutStart);
+      if (!duration) {
+        const remaining = segmentWithoutStart.replace(/^(å†è¿‡|ç„¶å|å†|å|å¼€å§‹|å»)+/, "").trim();
+        if (remaining) unrecognized.push(segment);
+        return;
+      }
+      let label = stripDurationText(segmentWithoutStart)
+        .replace(/^(ç°åœ¨å¼€å§‹|å¼€å§‹|å†è¿‡|ç„¶å|æ¥ç€|éšå|å†|å»|è¦|åš)+/, "")
+        .replace(/(?:ä»¥å|ä¹‹å|å|ç»“æŸ|å®Œæˆ)$/g, "")
+        .trim();
+      if (!label || /^(åˆ†é’Ÿ|å°æ—¶|æ—¶)$/.test(label)) label = `æ­¥éª¤ ${parsedSteps.length + 1}`;
+      parsedSteps.push({
+        id: uid(), label: label.slice(0, 80), duration: duration.duration,
+        hasRange: duration.hasRange, min: duration.min, max: duration.max
+      });
+    });
+
+    return { start, steps: parsedSteps.slice(0, MAX_STEPS), unrecognized };
+  };
+
+  const summaryText = (state) => {
+    const result = calculate(state);
+    const lines = [state.title || "æˆ‘çš„æ—¶é—´è®¡åˆ’"];
+    if (state.mode === "forward") lines.push(`å¼€å§‹ï¼š${formatDateTime(result.start)}`);
+    else lines.push(`æœ€æ™šå¼€å§‹ï¼š${formatDateTime(result.primary)}ï¼ˆç›®æ ‡ ${formatDateTime(result.end)}ï¼‰`);
+    result.entries.forEach((entry, index) => {
+      const range = entry.item.hasRange && !entry.range.invalid
+        ? `ï¼ŒèŒƒå›´ ${formatDuration(entry.range.min)}â€“${formatDuration(entry.range.max)}` : "";
+      lines.push(`${index + 1}. ${entry.item.label || `æ­¥éª¤ ${index + 1}`}ï½œ${formatDateTime(entry.start)}â€“${formatDateTime(entry.end)}ï½œ${formatDuration(entry.range.expected)}${range}`);
+    });
+    lines.push(`æ€»è®¡ï¼š${formatDuration(result.totalExpected)}`);
+    if (result.totalMin !== result.totalMax) {
+      if (state.mode === "forward") lines.push(`å®ŒæˆèŒƒå›´ï¼šæœ€æ—© ${formatDateTime(result.earliest)}ï¼Œæœ€æ™š ${formatDateTime(result.latest)}`);
+      else lines.push(`å¼€å§‹çª—å£ï¼šç¨³å¦¥ ${formatDateTime(result.earliest)}ï¼Œæœ€æ™š ${formatDateTime(result.latest)}`);
+    }
+    lines.push(state.mode === "forward" ? `é¢„è®¡ç»“æŸï¼š${formatDateTime(result.primary)}` : `é¢„è®¡å¼€å§‹ï¼š${formatDateTime(result.primary)}`);
+    lines.push(`â€” ${SITE.fullName}`);
+    return lines.join("\n");
+  };
+
+  const copyText = async (text) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      return true;
+    } catch (_) {
+      const area = document.createElement("textarea");
+      area.value = text;
+      area.setAttribute("readonly", "");
+      area.style.position = "fixed";
+      area.style.opacity = "0";
+      document.body.append(area);
+      area.select();
+      const success = document.execCommand("copy");
+      area.remove();
+      return success;
+    }
+  };
+
+  const icsEscape = (value) => String(value || "")
+    .replaceAll("\\", "\\\\")
+    .replaceAll("\r", "")
+    .replaceAll("\n", "\\n")
+    .replaceAll(",", "\\,")
+    .replaceAll(";", "\\;");
+
+  const icsUtc = (dateValue) => {
+    const date = new Date(dateValue);
+    const pad = (n) => String(n).padStart(2, "0");
+    return `${date.getUTCFullYear()}${pad(date.getUTCMonth() + 1)}${pad(date.getUTCDate())}T${pad(date.getUTCHours())}${pad(date.getUTCMinutes())}${pad(date.getUTCSeconds())}Z`;
+  };
+
+  const foldIcsLine = (line) => {
+    const chunks = [];
+    let current = "";
+    let bytes = 0;
+    for (const char of line) {
+      const size = encoder.encode(char).length;
+      if (bytes + size > (chunks.length ? 74 : 75)) {
+        chunks.push(current);
+        current = ` ${char}`;
+        bytes = 1 + size;
+      } else {
+        current += char;
+        bytes += size;
+      }
+    }
+    chunks.push(current);
+    return chunks.join("\r\n");
+  };
+
+  const makeIcs = (state) => {
+    const result = calculate(state);
+    const stamp = icsUtc(new Date());
+    const lines = [
+      "BEGIN:VCALENDAR", "VERSION:2.0", "CALSCALE:GREGORIAN", "METHOD:PUBLISH",
+      `PRODID:-//${SITE.name}//Time Chain 1.0//ZH-CN`,
+      `X-WR-CALNAME:${icsEscape(state.title || SITE.product)}`
+    ];
+    result.entries.forEach((entry, index) => {
+      const rangeNote = entry.item.hasRange && !entry.range.invalid
+        ? `é¢„è®¡ ${formatDuration(entry.range.expected)}ï¼›å¯èƒ½ ${formatDuration(entry.range.min)} è‡³ ${formatDuration(entry.range.max)}ã€‚` : "";
+      lines.push(
+        "BEGIN:VEVENT",
+        `UID:${uid()}@timecalc.top`,
+        `DTSTAMP:${stamp}`,
+        `DTSTART:${icsUtc(entry.start)}`,
+        `DTEND:${icsUtc(entry.end)}`,
+        `SUMMARY:${icsEscape(entry.item.label || `æ­¥éª¤ ${index + 1}`)}`,
+        `DESCRIPTION:${icsEscape(`${rangeNote}ç”± ${SITE.fullName} ç”Ÿæˆã€‚`)}`,
+        "END:VEVENT"
+      );
+    });
+    lines.push("END:VCALENDAR");
+    return `${lines.map(foldIcsLine).join("\r\n")}\r\n`;
+  };
+
+  const downloadText = (content, filename, type) => {
+    const blob = new Blob([content], { type });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = filename;
+    document.body.append(link);
+    link.click();
+    link.remove();
+    window.setTimeout(() => URL.revokeObjectURL(url), 2000);
+  };
+
+  class TimeChainApp {
+    constructor(root) {
+      this.root = root;
+      this.preset = root.dataset.preset || "home";
+      this.defaultState = makeDefaultState(this.preset);
+      const hashState = getHashState();
+      const lastState = storageGet(STORAGE_LAST, null);
+      this.state = normalizeState(hashState || (this.preset === "home" ? lastState : null), this.defaultState);
+      const savedPlans = storageGet(STORAGE_SAVED, []);
+      this.saved = Array.isArray(savedPlans) ? savedPlans.slice(0, 8) : [];
+      this.parseMessage = hashState || !location.hash ? "" : "åˆ†äº«é“¾æ¥æ— æ•ˆï¼Œå·²æ‰“å¼€é»˜è®¤è®¡åˆ’ã€‚";
+      this.announceMessage = "";
+      this.draggedId = null;
+      this.toastTimer = null;
+      this.instanceId = uid().replaceAll("-", "");
+      this.bind();
+      this.render();
+    }
+
+    bind() {
+      this.root.addEventListener("click", (event) => this.onClick(event));
+      this.root.addEventListener("change", (event) => this.onChange(event));
+      this.root.addEventListener("dragstart", (event) => this.onDragStart(event));
+      this.root.addEventListener("dragover", (event) => this.onDragOver(event));
+      this.root.addEventListener("dragleave", (event) => event.target.closest(".step-row")?.classList.remove("is-drag-over"));
+      this.root.addEventListener("drop", (event) => this.onDrop(event));
+      this.root.addEventListener("dragend", () => this.clearDrag());
+    }
+
+    commit(message = "") {
+      this.announceMessage = message;
+      const stored = storageSet(STORAGE_LAST, this.state);
+      this.render();
+      if (!stored) this.showToast("è®¡ç®—æ­£å¸¸ï¼Œä½†æµè§ˆå™¨æœªå…è®¸ä¿å­˜ã€‚", true);
+    }
+
+    showToast(message) {
+      const toast = this.root.querySelector(".toast");
+      if (!toast) return;
+      toast.textContent = message;
+      toast.classList.add("is-visible");
+      clearTimeout(this.toastTimer);
+      this.toastTimer = setTimeout(() => toast.classList.remove("is-visible"), 2600);
+    }
+
+    loadTemplate(name) {
+      if (name === "afterwork") this.state = makeDefaultState("home");
+      if (name === "airport") this.state = makeDefaultState("backward");
+      if (name === "morning") {
+        const start = nextAt(7, 0, new Date(Date.now() - 12 * 60 * 60000));
+        this.state = {
+          ...makeDefaultState("home"), anchor: start.getTime(), title: "æ—©æ™¨å‡ºé—¨",
+          steps: [step("æ´—æ¼±", 20), step("æ—©é¤", 25), step("æ”¶æ‹¾å‡ºé—¨", 15)]
+        };
+      }
+      if (name === "focus") this.state = makeDefaultState("focus");
+      this.commit("å·²è½½å…¥ç¤ºä¾‹ï¼Œæ•´æ¡æ—¶é—´çº¿å·²é‡æ–°è®¡ç®—ã€‚ ");
+    }
+
+    onClick(event) {
+      const button = event.target.closest("button[data-action]");
+      if (!button) return;
+      const action = button.dataset.action;
+      const id = button.dataset.id;
+      const index = this.state.steps.findIndex((item) => item.id === id);
+
+      if (action === "mode-forward" || action === "mode-reverse") {
+        this.state.mode = action === "mode-reverse" ? "reverse" : "forward";
+        this.commit(this.state.mode === "reverse" ? "å·²åˆ‡æ¢ä¸ºå€’æ¨æ¨¡å¼ã€‚" : "å·²åˆ‡æ¢ä¸ºæ­£å‘æ¨¡å¼ã€‚");
+      }
+
+      if (action === "set-now") {
+        this.state.anchor = roundToFive().getTime();
+        this.state.anchorMode = "now";
+        this.commit("å·²æŠŠç°åœ¨çš„æ—¶é—´å›ºå®šä¸ºèµ·ç‚¹ã€‚ ");
+      }
+
+      if (action === "shift") {
+        const minutes = Number(button.dataset.minutes || 0);
+        if (this.state.mode === "forward") this.state.anchor = addMinutes(new Date(this.state.anchor), minutes).getTime();
+        else this.state.target = addMinutes(new Date(this.state.target), minutes).getTime();
+        this.state.anchorMode = "custom";
+        this.commit(`æ•´ä½“${minutes >= 0 ? "å»¶å" : "æå‰"}${Math.abs(minutes)}åˆ†é’Ÿã€‚`);
+      }
+
+      if (action === "quick-add") {
+        if (this.state.steps.length >= MAX_STEPS) return this.showToast(`æœ€å¤šæ·»åŠ  ${MAX_STEPS} æ®µã€‚`);
+        const minutes = clampMinutes(button.dataset.minutes, 30);
+        this.state.steps.push(step(`æ­¥éª¤ ${this.state.steps.length + 1}`, minutes));
+        this.commit(`å·²æ·»åŠ  ${minutes} åˆ†é’Ÿã€‚`);
+      }
+
+      if (action === "add-step") {
+        if (this.state.steps.length >= MAX_STEPS) return this.showToast(`æœ€å¤šæ·»åŠ  ${MAX_STEPS} æ®µã€‚`);
+        this.state.steps.push(step(`æ­¥éª¤ ${this.state.steps.length + 1}`, 30));
+        this.commit("å·²æ·»åŠ ä¸‹ä¸€æ®µã€‚ ");
+        requestAnimationFrame(() => this.root.querySelector(`[data-id="${this.state.steps.at(-1).id}"] [data-field="label"]`)?.focus());
+      }
+
+      if (action === "delete-step" && index >= 0) {
+        this.state.steps.splice(index, 1);
+        this.commit("å·²åˆ é™¤ä¸€æ®µï¼Œåé¢çš„æ—¶é—´å·²æ›´æ–°ã€‚ ");
+      }
+
+      if (action === "duplicate-step" && index >= 0 && this.state.steps.length < MAX_STEPS) {
+        const copy = { ...clone(this.state.steps[index]), id: uid(), label: `${this.state.steps[index].label}ï¼ˆå‰¯æœ¬ï¼‰`.slice(0, 80) };
+        this.state.steps.splice(index + 1, 0, copy);
+        this.commit("å·²å¤åˆ¶ä¸€æ®µã€‚ ");
+      }
+
+      if ((action === "move-up" || action === "move-down") && index >= 0) {
+        const nextIndex = action === "move-up" ? index - 1 : index + 1;
+        if (nextIndex < 0 || nextIndex >= this.state.steps.length) return;
+        const [moved] = this.state.steps.splice(index, 1);
+        this.state.steps.splice(nextIndex, 0, moved);
+        this.commit(`${moved.label}å·²ç§»åŠ¨åˆ°ç¬¬ ${nextIndex + 1} æ®µã€‚`);
+      }
+
+      if (action === "template") this.loadTemplate(button.dataset.template);
+      if (action === "parse") this.applyNaturalText();
+      if (action === "copy") this.copySummary();
+      if (action === "share") this.sharePlan();
+      if (action === "export") this.exportCalendar();
+      if (action === "print") window.print();
+
+      if (action === "open-save") {
+        const dialog = this.root.querySelector("dialog");
+        const input = dialog?.querySelector("input");
+        if (dialog && input) {
+          input.value = this.state.title || "æˆ‘çš„æ—¶é—´è®¡åˆ’";
+          dialog.showModal();
+          requestAnimationFrame(() => input.select());
+        }
+      }
+
+      if (action === "close-save") this.root.querySelector("dialog")?.close();
+      if (action === "confirm-save") this.savePlan();
+
+      if (action === "load-saved") {
+        const saved = this.saved.find((item) => item.id === id);
+        if (saved) {
+          this.state = normalizeState(saved.state, this.defaultState);
+          this.commit(`å·²è½½å…¥â€œ${saved.name}â€ã€‚`);
+        }
+      }
+
+      if (action === "delete-saved") {
+        this.saved = this.saved.filter((item) => item.id !== id);
+        storageSet(STORAGE_SAVED, this.saved);
+        this.render();
+        this.showToast("å·²åˆ é™¤ä¿å­˜çš„è®¡åˆ’ã€‚ ");
+      }
+    }
+
+    onChange(event) {
+      const target = event.target;
+      const field = target.dataset.field;
+      if (!field) return;
+      const id = target.closest("[data-id]")?.dataset.id;
+      const item = this.state.steps.find((entry) => entry.id === id);
+
+      if (field === "anchor") {
+        this.state.anchor = parseLocalDateTime(target.value, this.state.anchor).getTime();
+        this.state.anchorMode = "custom";
+      } else if (field === "target") {
+        this.state.target = parseLocalDateTime(target.value, this.state.target).getTime();
+      } else if (item && field === "label") {
+        item.label = String(target.value || "").trim().slice(0, 80) || "æœªå‘½åæ­¥éª¤";
+      } else if (item && field === "duration") {
+        item.duration = clampMinutes(target.value, item.duration);
+        if (!item.hasRange) item.min = item.max = item.duration;
+      } else if (item && field === "hasRange") {
+        item.hasRange = target.checked;
+        if (item.hasRange && item.min === item.max) {
+          item.min = Math.max(0, item.duration - 10);
+          item.max = Math.min(MAX_MINUTES, item.duration + 10);
+        }
+      } else if (item && field === "min") {
+        item.min = clampMinutes(target.value, item.min);
+      } else if (item && field === "max") {
+        item.max = clampMinutes(target.value, item.max);
+      } else {
+        return;
+      }
+      this.commit("æ—¶é—´çº¿å·²æ›´æ–°ã€‚ ");
+    }
+
+    onDragStart(event) {
+      const row = event.target.closest(".step-row");
+      if (!row) return;
+      this.draggedId = row.dataset.id;
+      row.classList.add("is-dragging");
+      event.dataTransfer.effectAllowed = "move";
+      event.dataTransfer.setData("text/plain", this.draggedId);
+    }
+
+    onDragOver(event) {
+      const row = event.target.closest(".step-row");
+      if (!row || row.dataset.id === this.draggedId) return;
+      event.preventDefault();
+      this.root.querySelectorAll(".step-row").forEach((item) => item.classList.remove("is-drag-over"));
+      row.classList.add("is-drag-over");
+    }
+
+    onDrop(event) {
+      const row = event.target.closest(".step-row");
+      if (!row || !this.draggedId || row.dataset.id === this.draggedId) return this.clearDrag();
+      event.preventDefault();
+      const from = this.state.steps.findIndex((item) => item.id === this.draggedId);
+      const to = this.state.steps.findIndex((item) => item.id === row.dataset.id);
+      if (from >= 0 && to >= 0) {
+        const [moved] = this.state.steps.splice(from, 1);
+        this.state.steps.splice(to, 0, moved);
+        this.clearDrag();
+        this.commit(`${moved.label}å·²ç§»åŠ¨åˆ°ç¬¬ ${to + 1} æ®µã€‚`);
+      }
+    }
+
+    clearDrag() {
+      this.root.querySelectorAll(".step-row").forEach((item) => item.classList.remove("is-dragging", "is-drag-over"));
+      this.draggedId = null;
+    }
+
+    applyNaturalText() {
+      const textarea = this.root.querySelector("[data-natural-input]");
+      const text = textarea?.value || "";
+      if (!text.trim()) return this.showToast("å…ˆè¾“å…¥ä¸€æ®µå®‰æ’ã€‚ ");
+      const parsed = parseNaturalText(text);
+      if (parsed.start?.invalid) {
+        this.parseMessage = parsed.start.note;
+        this.render();
+        return;
+      }
+      if (!parsed.steps.length) {
+        this.parseMessage = "æ²¡æœ‰æ‰¾åˆ°å¯è®¡ç®—çš„æ—¶é•¿ã€‚è¯•è¯•â€œæ¸¸æ³³45åˆ†é’Ÿï¼Œä¼‘æ¯15åˆ†é’Ÿâ€ã€‚";
+        this.render();
+        return;
+      }
+      this.state.mode = "forward";
+      if (parsed.start?.date) {
+        this.state.anchor = parsed.start.date.getTime();
+        this.state.anchorMode = /ç°åœ¨/.test(parsed.start.matched || "") ? "now" : "custom";
+      }
+      this.state.steps = parsed.steps;
+      const warnings = [];
+      if (parsed.start?.note) warnings.push(parsed.start.note);
+      if (parsed.unrecognized.length) warnings.push(`æœªè¯†åˆ«ï¼š${parsed.unrecognized.slice(0, 3).join("ã€")}ã€‚å…¶ä½™å†…å®¹å·²åŠ å…¥ï¼Œå¯ç»§ç»­ç¼–è¾‘ã€‚`);
+      this.parseMessage = warnings.join(" ") || `å·²è¯†åˆ« ${parsed.steps.length} æ®µå®‰æ’ã€‚`;
+      this.commit("è‡ªç„¶è¯­è¨€å®‰æ’å·²è½¬æ¢æˆæ—¶é—´çº¿ã€‚ ");
+    }
+
+    async copySummary() {
+      const success = await copyText(summaryText(this.state));
+      this.showToast(success ? "å®Œæ•´æ—¶é—´çº¿å·²å¤åˆ¶ã€‚" : "å¤åˆ¶å¤±è´¥ï¼Œè¯·æ‰‹åŠ¨é€‰æ‹©å†…å®¹ã€‚ ");
+    }
+
+    async sharePlan() {
+      const payload = base64UrlEncode(this.state);
+      const cleanUrl = location.protocol === "file:"
+        ? location.href.split("#")[0]
+        : `${location.origin}${location.pathname}`;
+      const url = `${cleanUrl}#p=${payload}`;
+      if (url.length > 7000) {
+        await this.copySummary();
+        this.showToast("è®¡åˆ’è¾ƒé•¿ï¼Œå·²æ”¹ä¸ºå¤åˆ¶æ–‡å­—ã€‚ ");
+        return;
+      }
+      const shareData = { title: this.state.title || SITE.fullName, text: `æˆ‘çš„æ—¶é—´è®¡åˆ’ï¼š${formatDateTime(calculate(this.state).primary)}`, url };
+      if (navigator.share && matchMedia("(pointer: coarse)").matches) {
+        try {
+          await navigator.share(shareData);
+          return;
+        } catch (error) {
+          if (error?.name === "AbortError") return;
+        }
+      }
+      const success = await copyText(url);
+      this.showToast(success ? "åˆ†äº«é“¾æ¥å·²å¤åˆ¶ï¼›æ´»åŠ¨å†…å®¹åªä¿å­˜åœ¨é“¾æ¥çš„ # åã€‚" : "æ— æ³•å¤åˆ¶åˆ†äº«é“¾æ¥ã€‚ ");
+    }
+
+    exportCalendar() {
+      if (!this.state.steps.length) return this.showToast("å…ˆæ·»åŠ è‡³å°‘ä¸€æ®µå®‰æ’ã€‚ ");
+      const hasRanges = this.state.steps.some((item) => item.hasRange && item.min !== item.max);
+      const safeTitle = (this.state.title || "time-plan").replace(/[\\/:*?"<>|]/g, "-").slice(0, 40);
+      downloadText(makeIcs(this.state), `${safeTitle}.ics`, "text/calendar;charset=utf-8");
+      this.showToast(hasRanges ? "å·²æŒ‰æ¯æ®µçš„é¢„è®¡æ—¶é•¿å¯¼å‡ºæ—¥å†ã€‚" : "æ—¥å†æ–‡ä»¶å·²ç”Ÿæˆã€‚ ");
+    }
+
+    savePlan() {
+      const dialog = this.root.querySelector("dialog");
+      const name = String(dialog?.querySelector("input")?.value || "æˆ‘çš„æ—¶é—´è®¡åˆ’").trim().slice(0, 50) || "æˆ‘çš„æ—¶é—´è®¡åˆ’";
+      this.state.title = name;
+      this.saved = [{ id: uid(), name, savedAt: Date.now(), state: clone(this.state) }, ...this.saved].slice(0, 8);
+      const success = storageSet(STORAGE_SAVED, this.saved);
+      storageSet(STORAGE_LAST, this.state);
+      dialog?.close();
+      this.render();
+      this.showToast(success ? `å·²ä¿å­˜â€œ${name}â€ã€‚` : "æµè§ˆå™¨æœªå…è®¸ä¿å­˜ï¼Œä½†å½“å‰è®¡ç®—ä¸å—å½±å“ã€‚ ");
+    }
+
+    render() {
+      const result = calculate(this.state);
+      const hasRange = result.totalMin !== result.totalMax;
+      const primaryLabel = this.state.mode === "forward" ? "é¢„è®¡ç»“æŸ" : "å»ºè®®å¼€å§‹";
+      const anchorLabel = this.state.mode === "forward" ? "ä»ä»€ä¹ˆæ—¶å€™å¼€å§‹" : "å¿…é¡»åœ¨ä»€ä¹ˆæ—¶å€™å®Œæˆ";
+      const resultRange = hasRange
+        ? (this.state.mode === "forward"
+          ? `å®Œæˆçª—å£ï¼šæœ€æ—© <strong>${formatDateTime(result.earliest)}</strong>ï¼Œæœ€æ™š <strong>${formatDateTime(result.latest)}</strong>`
+          : `å¼€å§‹çª—å£ï¼šç¨³å¦¥ <strong>${formatDateTime(result.earliest)}</strong>ï¼Œæœ€æ™š <strong>${formatDateTime(result.latest)}</strong>`)
+        : "";
+      const invalidRanges = this.state.steps.some((item) => item.hasRange && item.min > item.max);
+
+      this.root.classList.add("time-chain-app");
+      this.root.innerHTML = `
+        <div class="app-toolbar">
+          <div class="app-title"><span>æ—¶é—´é“¾å·¥ä½œå°</span><span class="local-badge">æœ¬åœ°è®¡ç®— Â· å…ç™»å½•</span></div>
+          <div class="toolbar-actions">
+            <button class="text-button button-small" type="button" data-action="open-save">â™¡ ä¿å­˜</button>
+            <button class="text-button button-small" type="button" data-action="print">â–¤ æ‰“å°</button>
+          </div>
+        </div>
+
+        <div class="mode-switch" role="tablist" aria-label="è®¡ç®—æ–¹å¼">
+          <button class="mode-button" type="button" role="tab" aria-selected="${this.state.mode === "forward"}" data-action="mode-forward">ä»å‡ ç‚¹å¼€å§‹</button>
+          <button class="mode-button" type="button" role="tab" aria-selected="${this.state.mode === "reverse"}" data-action="mode-reverse">åœ¨å‡ ç‚¹å‰å®Œæˆ</button>
+        </div>
+
+        <section class="result-hero" aria-live="polite" aria-atomic="true">
+          <p class="result-kicker">${primaryLabel}</p>
+          <p class="result-time"><time datetime="${new Date(result.primary).toISOString()}">${formatClock(result.primary)}</time></p>
+          <p class="result-day">${dayText(result.primary)} Â· ${this.state.mode === "forward" ? "å…¨éƒ¨å®Œæˆ" : "å¼€å§‹æœ€åˆé€‚"}</p>
+          <div class="result-meta">
+            <span>æ€»æ—¶é•¿ <strong>${formatDuration(result.totalExpected)}</strong></span>
+            <span>${this.state.steps.length} æ®µå®‰æ’</span>
+            <span>${this.state.mode === "forward" ? "èµ·ç‚¹" : "ç›®æ ‡"} <strong>${formatDateTime(this.state.mode === "forward" ? result.start : result.end)}</strong></span>
+          </div>
+          ${resultRange ? `<p class="result-range">${resultRange}</p>` : ""}
+          ${invalidRanges ? `<p class="result-range">æœ‰ä¸€æ®µçš„æœ€çŸ­æ—¶é—´å¤§äºæœ€é•¿æ—¶é—´ï¼›è¯¥æ®µæš‚æŒ‰é¢„è®¡æ—¶é•¿è®¡ç®—ï¼Œè¯·åœ¨â€œæ—¶é—´èŒƒå›´â€ä¸­ä¿®æ­£ã€‚</p>` : ""}
+          <div class="result-actions">
+            <button class="secondary-button button-small" type="button" data-action="copy">å¤åˆ¶æ—¶é—´çº¿</button>
+            <button class="secondary-button button-small" type="button" data-action="share">åˆ†äº«é“¾æ¥</button>
+            <button class="secondary-button button-small" type="button" data-action="export">åŠ å…¥æ—¥å†</button>
+          </div>
+        </section>
+
+        <div class="editor-layout">
+          <main class="editor-main">
+            <section class="anchor-card" aria-labelledby="anchor-${this.instanceId}">
+              <h2 class="section-heading" id="anchor-${this.instanceId}">${anchorLabel}</h2>
+              <div class="anchor-row">
+                <label class="field">
+                  <span class="field-label">${this.state.mode === "forward" ? "å¼€å§‹æ—¥æœŸä¸æ—¶é—´" : "ç›®æ ‡æ—¥æœŸä¸æ—¶é—´"}</span>
+                  <input class="input" type="datetime-local" data-field="${this.state.mode === "forward" ? "anchor" : "target"}" value="${inputDateTime(this.state.mode === "forward" ? this.state.anchor : this.state.target)}">
+                </label>
+                <div>
+                  <div class="shift-actions" aria-label="æ•´ä½“è°ƒæ•´æ—¶é—´">
+                    <button class="secondary-button button-small" type="button" data-action="shift" data-minutes="-10">âˆ’10 åˆ†</button>
+                    ${this.state.mode === "forward" ? `<button class="secondary-button button-small" type="button" data-action="set-now">è®¾ä¸ºç°åœ¨</button>` : ""}
+                    <button class="secondary-button button-small" type="button" data-action="shift" data-minutes="10">+10 åˆ†</button>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section aria-labelledby="steps-${this.instanceId}">
+              <h2 class="section-heading" id="steps-${this.instanceId}">æŒ‰é¡ºåºæ·»åŠ æ¯ä¸€æ®µ</h2>
+              <p class="section-description">æ”¹ä¸€æ®µï¼Œåé¢å…¨éƒ¨è‡ªåŠ¨æ›´æ–°ã€‚ç”µè„‘å¯æ‹–åŠ¨æ’åºï¼Œæ‰‹æœºå’Œé”®ç›˜å¯ç”¨ä¸Šä¸‹ç§»åŠ¨ã€‚</p>
+              <div class="quick-duration" aria-label="å¿«é€Ÿæ·»åŠ æ—¶é•¿">
+                ${[15, 30, 45, 60, 90].map((minutes) => `<button class="chip${minutes === 45 ? " chip--strong" : ""}" type="button" data-action="quick-add" data-minutes="${minutes}">+${minutes} åˆ†</button>`).join("")}
+              </div>
+              <ol class="timeline">
+                ${this.renderSteps(result.entries)}
+              </ol>
+              <button class="secondary-button add-step-button" type="button" data-action="add-step">ï¼‹ æ·»åŠ ä¸‹ä¸€æ®µ</button>
+            </section>
+
+            <section class="natural-card" aria-labelledby="natural-${this.instanceId}">
+              <h2 class="section-heading" id="natural-${this.instanceId}">ä¹Ÿå¯ä»¥ç²˜è´´ä¸€å¥è¯</h2>
+              <p class="section-description">ä¾‹å¦‚ï¼šä¸‹åˆ5ç‚¹æ¸¸æ³³45åˆ†é’Ÿï¼Œä¼‘æ¯15åˆ†é’Ÿï¼Œæ™šé¥­1å°æ—¶ï¼Œå›å®¶åŠå°æ—¶</p>
+              <label class="field">
+                <span class="sr-only">ç”¨ä¸€å¥è¯è¾“å…¥å®‰æ’</span>
+                <textarea class="textarea" data-natural-input maxlength="3000" placeholder="æŠŠä½ çš„å®‰æ’å†™åœ¨è¿™é‡Œâ€¦â€¦"></textarea>
+              </label>
+              <div class="natural-actions"><button class="primary-button" type="button" data-action="parse">è½¬æ¢æˆæ—¶é—´çº¿</button></div>
+              ${this.parseMessage ? `<p class="parse-note${/æ— æ³•|æœªè¯†åˆ«|æ— æ•ˆ/.test(this.parseMessage) ? " is-warning" : ""}">${escapeHTML(this.parseMessage)}</p>` : ""}
+            </section>
+          </main>
+
+          <aside class="editor-side" aria-label="ç¤ºä¾‹å’Œå·²ä¿å­˜è®¡åˆ’">
+            <section class="side-section">
+              <h2 class="section-heading">ä¸€é”®å¥—ç”¨åœºæ™¯</h2>
+              <div class="template-grid">
+                <button class="template-button" type="button" data-action="template" data-template="afterwork"><strong>ä¸‹ç­åçš„å®‰æ’</strong><span>æ¸¸æ³³ Â· ä¼‘æ¯ Â· æ™šé¥­ Â· å›å®¶</span></button>
+                <button class="template-button" type="button" data-action="template" data-template="airport"><strong>èµ¶é£æœºå€’æ¨</strong><span>ä»åˆ°è¾¾æ—¶é—´åæ¨æœ€æ™šå¼€å§‹</span></button>
+                <button class="template-button" type="button" data-action="template" data-template="morning"><strong>æ—©æ™¨å‡ºé—¨</strong><span>æ´—æ¼± Â· æ—©é¤ Â· æ”¶æ‹¾</span></button>
+              </div>
+            </section>
+            <section class="side-section">
+              <h2 class="section-heading">ä¿å­˜çš„è®¡åˆ’</h2>
+              ${this.renderSaved()}
+            </section>
+            <section class="side-section">
+              <p class="privacy-note">è®¡åˆ’é»˜è®¤åªä¿å­˜åœ¨è¿™å°è®¾å¤‡ã€‚åˆ†äº«çŠ¶æ€å†™åœ¨é“¾æ¥çš„ # åï¼Œä¸ä¼šä½œä¸ºæ™®é€šé¡µé¢åœ°å€æäº¤ç»™æœåŠ¡å™¨æˆ–æœç´¢å¼•æ“ã€‚</p>
+            </section>
+          </aside>
+        </div>
+
+        <p class="sr-only" aria-live="polite">${escapeHTML(this.announceMessage)}</p>
+        <div class="toast" role="status" aria-live="polite"></div>
+        <dialog class="modal" aria-labelledby="save-title-${this.instanceId}">
+          <form class="modal__inner" method="dialog" onsubmit="return false">
+            <h2 id="save-title-${this.instanceId}">ä¿å­˜è¿™æ¡æ—¶é—´çº¿</h2>
+            <p>ä¸‹æ¬¡æ‰“å¼€æ—¶å¯ä»¥ä¸€é”®è½½å…¥ã€‚å†…å®¹åªä¿å­˜åœ¨å½“å‰æµè§ˆå™¨ã€‚</p>
+            <label class="field"><span class="field-label">è®¡åˆ’åç§°</span><input class="input" maxlength="50" value="${escapeHTML(this.state.title)}"></label>
+            <div class="modal__actions">
+              <button class="secondary-button" type="button" data-action="close-save">å–æ¶ˆ</button>
+              <button class="primary-button primary-button--accent" type="button" data-action="confirm-save">ä¿å­˜</button>
+            </div>
+          </form>
+        </dialog>
+      `;
+    }
+
+    renderSteps(entries) {
+      if (!entries.length) return `<li class="empty-note">è¿˜æ²¡æœ‰å®‰æ’ã€‚ç‚¹å‡»â€œæ·»åŠ ä¸‹ä¸€æ®µâ€æˆ–ä¸Šæ–¹å¿«æ·æ—¶é•¿å¼€å§‹ã€‚</li>`;
+      return entries.map((entry, index) => {
+        const item = entry.item;
+        const invalid = item.hasRange && item.min > item.max;
+        return `
+          <li class="step-row" draggable="true" data-id="${escapeHTML(item.id)}">
+            <span class="step-index" aria-hidden="true">${index + 1}</span>
+            <article class="step-card">
+              <div class="step-main-fields">
+                <label class="field">
+                  <span class="field-label">è¿™æ®µåšä»€ä¹ˆï¼ˆå¯ä¸å¡«ï¼‰</span>
+                  <input class="input" type="text" maxlength="80" data-field="label" value="${escapeHTML(item.label)}" aria-label="ç¬¬ ${index + 1} æ®µåç§°">
+                </label>
+                <label class="field duration-wrap">
+                  <span class="field-label">é¢„è®¡æ—¶é•¿</span>
+                  <input class="input" type="number" inputmode="numeric" min="0" max="${MAX_MINUTES}" step="1" data-field="duration" value="${entry.range.expected}" aria-label="${escapeHTML(item.label)}é¢„è®¡æ—¶é•¿ï¼ˆåˆ†é’Ÿï¼‰">
+                  <span class="duration-unit">åˆ†é’Ÿ</span>
+                </label>
+              </div>
+              <p class="step-time"><strong><time datetime="${entry.start.toISOString()}">${formatDateTime(entry.start)}</time> â†’ <time datetime="${entry.end.toISOString()}">${formatDateTime(entry.end)}</time></strong> Â· ${formatDuration(entry.range.expected)}${item.hasRange && !invalid ? ` Â· å¯ç”¨ ${formatDuration(item.min)}â€“${formatDuration(item.max)}` : ""}</p>
+              <details class="advanced-panel"${item.hasRange ? " open" : ""}>
+                <summary>æ—¶é—´èŒƒå›´ï¼ˆå¯é€‰ï¼‰</summary>
+                <label class="range-toggle"><input type="checkbox" data-field="hasRange" ${item.hasRange ? "checked" : ""}> è¿™æ®µæ—¶é—´å¯èƒ½æœ‰æµ®åŠ¨</label>
+                ${item.hasRange ? `
+                  <div class="range-fields">
+                    <label class="field"><span class="field-label">æœ€çŸ­ï¼ˆåˆ†é’Ÿï¼‰</span><input class="input" type="number" inputmode="numeric" min="0" max="${MAX_MINUTES}" data-field="min" value="${item.min}"></label>
+                    <label class="field"><span class="field-label">æœ€é•¿ï¼ˆåˆ†é’Ÿï¼‰</span><input class="input" type="number" inputmode="numeric" min="0" max="${MAX_MINUTES}" data-field="max" value="${item.max}"></label>
+                  </div>
+                  ${invalid ? `<p class="validation-message">æœ€çŸ­æ—¶é—´ä¸èƒ½å¤§äºæœ€é•¿æ—¶é—´ã€‚</p>` : ""}
+                ` : ""}
+              </details>
+              <div class="step-actions">
+                <div class="move-actions" aria-label="è°ƒæ•´ç¬¬ ${index + 1} æ®µé¡ºåº">
+                  <button class="icon-button button-small" type="button" data-action="move-up" data-id="${escapeHTML(item.id)}" aria-label="ä¸Šç§»${escapeHTML(item.label)}" ${index === 0 ? "disabled" : ""}>â†‘</button>
+                  <button class="icon-button button-small" type="button" data-action="move-down" data-id="${escapeHTML(item.id)}" aria-label="ä¸‹ç§»${escapeHTML(item.label)}" ${index === entries.length - 1 ? "disabled" : ""}>â†“</button>
+                  <button class="text-button button-small" type="button" data-action="duplicate-step" data-id="${escapeHTML(item.id)}">å¤åˆ¶</button>
+                </div>
+                <button class="text-button button-small" type="button" data-action="delete-step" data-id="${escapeHTML(item.id)}" aria-label="åˆ é™¤${escapeHTML(item.label)}">åˆ é™¤</button>
+              </div>
+            </article>
+          </li>
+        `;
+      }).join("");
+    }
+
+    renderSaved() {
+      if (!Array.isArray(this.saved) || !this.saved.length) return `<p class="empty-note">è¿˜æ²¡æœ‰ä¿å­˜ã€‚è°ƒæ•´å¥½åç‚¹å‡»é¡¶éƒ¨â€œä¿å­˜â€ã€‚</p>`;
+      return `<ul class="saved-list">${this.saved.map((saved) => `
+        <li class="saved-item">
+          <button class="saved-load" type="button" data-action="load-saved" data-id="${escapeHTML(saved.id)}"><strong>${escapeHTML(saved.name)}</strong><small>${new Intl.DateTimeFormat("zh-CN", { month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit" }).format(new Date(saved.savedAt))}</small></button>
+          <button class="icon-button" type="button" data-action="delete-saved" data-id="${escapeHTML(saved.id)}" aria-label="åˆ é™¤ä¿å­˜çš„${escapeHTML(saved.name)}">Ã—</button>
+        </li>
+      `).join("")}</ul>`;
+    }
+  }
+
+  const initTheme = () => {
+    const saved = storageGet(`${SITE.storagePrefix}:theme`, "");
+    const preferred = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.dataset.theme = saved || preferred;
+    document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
+      const updateLabel = () => {
+        const isDark = document.documentElement.dataset.theme === "dark";
+        button.textContent = isDark ? "â˜€" : "â˜¾";
+        button.setAttribute("aria-label", isDark ? "åˆ‡æ¢åˆ°æµ…è‰²æ¨¡å¼" : "åˆ‡æ¢åˆ°æ·±è‰²æ¨¡å¼");
+      };
+      updateLabel();
+      button.addEventListener("click", () => {
+        document.documentElement.dataset.theme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+        storageSet(`${SITE.storagePrefix}:theme`, document.documentElement.dataset.theme);
+        updateLabel();
+      });
+    });
+  };
+
+  document.querySelectorAll("[data-time-chain-app]").forEach((root) => new TimeChainApp(root));
+  initTheme();
+
+  if ("serviceWorker" in navigator && /^https?:$/.test(location.protocol)) {
+    window.addEventListener("load", () => navigator.serviceWorker.register("/sw.js").catch(() => {}));
+  }
+})();
