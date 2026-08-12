@@ -5,7 +5,7 @@
     name: "算到几点",
     product: "时间接龙",
     fullName: "算到几点 · 时间接龙",
-    storagePrefix: "time-chain-prototype-v1"
+    storagePrefix: "timecalc-time-chain-zh-v1"
   };
   const MAX_MINUTES = 7 * 24 * 60;
   const MAX_STEPS = 50;
@@ -530,7 +530,9 @@
       this.state = normalizeState(hashState || (this.preset === "home" ? lastState : null), this.defaultState);
       const savedPlans = storageGet(STORAGE_SAVED, []);
       this.saved = Array.isArray(savedPlans) ? savedPlans.slice(0, 8) : [];
-      this.parseMessage = hashState || !location.hash ? "" : "分享链接无效，已打开默认计划。";
+      this.parseMessage = hashState || !location.hash || !location.hash.startsWith("#p=")
+        ? ""
+        : "分享链接无效，已打开默认计划。";
       this.announceMessage = "";
       this.draggedId = null;
       this.toastTimer = null;
@@ -1022,7 +1024,4 @@
   document.querySelectorAll("[data-time-chain-app]").forEach((root) => new TimeChainApp(root));
   initTheme();
 
-  if ("serviceWorker" in navigator && /^https?:$/.test(location.protocol)) {
-    window.addEventListener("load", () => navigator.serviceWorker.register("/sw.js").catch(() => {}));
-  }
 })();

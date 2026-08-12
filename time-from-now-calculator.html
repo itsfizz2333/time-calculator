@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Time From Now Calculator – Minutes &amp; Hours From Now</title>
+  <meta name="description" content="Find what time it will be minutes, hours, or days from now. Tap a shortcut or enter an exact duration to get the future date and time instantly.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#3157d5">
+  <link rel="canonical" href="https://timecalc.top/time-from-now-calculator">
+  <link rel="alternate" hreflang="en" href="https://timecalc.top/time-from-now-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://timecalc.top/zh/45-minutes-later/">
+  <link rel="alternate" hreflang="x-default" href="https://timecalc.top/time-from-now-calculator">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Time Calculator">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Time From Now Calculator – Minutes &amp; Hours From Now">
+  <meta property="og:description" content="Find the future date and clock time after any number of minutes, hours, or days.">
+  <meta property="og:url" content="https://timecalc.top/time-from-now-calculator">
+  <meta property="og:image" content="https://timecalc.top/og.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1731">
+  <meta property="og:image:height" content="909">
+  <meta property="og:image:alt" content="Time Calculator — add or subtract time in a few taps">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Time From Now Calculator">
+  <meta name="twitter:description" content="Find what time it will be minutes, hours, or days from now.">
+  <meta name="twitter:image" content="https://timecalc.top/og.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://timecalc.top/time-from-now-calculator#webapplication",
+        "url": "https://timecalc.top/time-from-now-calculator",
+        "name": "Time From Now Calculator",
+        "description": "A free calculator for finding the future date and time after any number of days, hours, or minutes.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I find what time it will be in 90 minutes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tap +90 min, or enter 90 in the Minutes field. The calculator adds 1 hour and 30 minutes to your current local time."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens if the future time crosses midnight?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The result automatically moves to the correct next calendar date."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I enter more than 59 minutes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Values such as 90 or 150 minutes are accepted and normalized automatically."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which time zone does the calculator use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It uses the local date and time reported by your device. It does not convert between time zones."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the starting time update automatically?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The current time refreshes each minute, and you can also use Refresh now."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#from-now-calculator">Skip to calculator</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Time Calculator home">
+        <span class="brand-mark" aria-hidden="true">
+          <span class="brand-hand"></span>
+        </span>
+        <span>Time Calculator</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/">Date &amp; time</a>
+        <a href="/time-duration-calculator">Time Duration</a>
+        <a href="/hours-minutes-calculator">Hours &amp; Minutes</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="/about">About</a>
+        <a class="language-link" href="/zh/45-minutes-later/" lang="zh-Hans" hreflang="zh-Hans" data-language-switch>简体中文</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero duration-hero container" aria-labelledby="page-title">
+      <p class="eyebrow">Free future time tool</p>
+      <h1 id="page-title">Time From Now Calculator</h1>
+      <p class="hero-copy">Find the exact clock time and date after any amount of time. Start from your device’s current time, tap a shortcut, or enter your own duration.</p>
+    </section>
+
+    <div class="container calculator-layout">
+      <section class="calculator-card from-now-card" id="from-now-calculator" aria-label="Time from now calculator">
+        <div class="section-heading duration-section-heading">
+          <div>
+            <p class="duration-card-title">How far from now?</p>
+            <p class="duration-card-copy">Choose a shortcut or enter days, hours, and minutes. Your answer updates instantly.</p>
+          </div>
+          <button class="text-button" id="clear-from-now" type="button">Clear</button>
+        </div>
+
+        <div class="from-now-start">
+          <div>
+            <span class="section-note">Starting time</span>
+            <strong id="from-now-start-time">Now</strong>
+          </div>
+          <button class="secondary-button compact-button" id="refresh-from-now" type="button">Refresh now</button>
+        </div>
+
+        <div class="calculator-section">
+          <div class="section-heading">
+            <span class="section-label">Choose a shortcut</span>
+            <span class="section-note">One tap</span>
+          </div>
+          <div class="quick-grid from-now-presets" role="group" aria-label="Common future durations">
+            <button type="button" class="quick-button" data-from-days="0" data-from-hours="0" data-from-minutes="15" aria-pressed="false">+ 15 min</button>
+            <button type="button" class="quick-button" data-from-days="0" data-from-hours="0" data-from-minutes="30" aria-pressed="false">+ 30 min</button>
+            <button type="button" class="quick-button" data-from-days="0" data-from-hours="0" data-from-minutes="45" aria-pressed="false">+ 45 min</button>
+            <button type="button" class="quick-button" data-from-days="0" data-from-hours="1" data-from-minutes="0" aria-pressed="false">+ 1 hour</button>
+            <button type="button" class="quick-button is-active" data-from-days="0" data-from-hours="0" data-from-minutes="90" aria-pressed="true">+ 90 min</button>
+            <button type="button" class="quick-button" data-from-days="0" data-from-hours="2" data-from-minutes="0" aria-pressed="false">+ 2 hours</button>
+            <button type="button" class="quick-button" data-from-days="0" data-from-hours="8" data-from-minutes="0" aria-pressed="false">+ 8 hours</button>
+            <button type="button" class="quick-button" data-from-days="1" data-from-hours="0" data-from-minutes="0" aria-pressed="false">+ 1 day</button>
+          </div>
+        </div>
+
+        <div class="calculator-section">
+          <div class="section-heading">
+            <span class="section-label">Or enter an exact duration</span>
+            <span class="section-note">90 minutes works</span>
+          </div>
+          <div class="stepper-grid from-now-inputs">
+            <div class="stepper">
+              <label class="stepper-label" for="from-now-days">Days</label>
+              <span class="stepper-controls">
+                <button type="button" data-from-step="-1" aria-label="Remove one day">−</button>
+                <input class="from-now-input" id="from-now-days" type="number" inputmode="numeric" min="0" max="9999" step="1" value="0" data-from-unit="days" aria-label="Days from now">
+                <button type="button" data-from-step="1" aria-label="Add one day">＋</button>
+              </span>
+            </div>
+            <div class="stepper">
+              <label class="stepper-label" for="from-now-hours">Hours</label>
+              <span class="stepper-controls">
+                <button type="button" data-from-step="-1" aria-label="Remove one hour">−</button>
+                <input class="from-now-input" id="from-now-hours" type="number" inputmode="numeric" min="0" max="9999" step="1" value="0" data-from-unit="hours" aria-label="Hours from now">
+                <button type="button" data-from-step="1" aria-label="Add one hour">＋</button>
+              </span>
+            </div>
+            <div class="stepper">
+              <label class="stepper-label" for="from-now-minutes">Minutes</label>
+              <span class="stepper-controls">
+                <button type="button" data-from-step="-5" aria-label="Remove five minutes">−</button>
+                <input class="from-now-input" id="from-now-minutes" type="number" inputmode="numeric" min="0" max="9999" step="1" value="90" data-from-unit="minutes" aria-label="Minutes from now">
+                <button type="button" data-from-step="5" aria-label="Add five minutes">＋</button>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <section class="result-panel" aria-labelledby="from-now-result-heading" aria-live="polite" aria-atomic="true">
+          <p class="result-kicker" id="from-now-result-heading">90 minutes from now</p>
+          <output class="result-primary" id="from-now-result-primary">Loading local time…</output>
+          <p class="result-full" id="from-now-result-full"></p>
+          <p class="from-now-explanation" id="from-now-explanation"></p>
+          <div class="result-actions">
+            <button class="primary-button" id="copy-from-now" type="button">
+              <span aria-hidden="true">▣</span>
+              <span class="copy-label">Copy result</span>
+            </button>
+          </div>
+        </section>
+
+        <p class="local-note">Uses the current date and time on your device. No time zone conversion.</p>
+        <noscript><p class="noscript-message">JavaScript is required to use this calculator.</p></noscript>
+      </section>
+
+      <aside class="ad-slot ad-rail" aria-label="Advertisement">
+        <span>ADVERTISEMENT</span>
+        <strong>300 × 250</strong>
+      </aside>
+    </div>
+
+    <section class="content-section container" id="how-it-works" aria-labelledby="how-title">
+      <div class="section-intro">
+        <p class="eyebrow">How it works</p>
+        <h2 id="how-title">Find a future time in three steps</h2>
+        <p>The calculator starts with your current local time and adds the exact duration you choose.</p>
+      </div>
+      <div class="steps-grid">
+        <article>
+          <span class="step-number">1</span>
+          <h3>Start with now</h3>
+          <p>The calculator reads the current local date and time from your device.</p>
+        </article>
+        <article>
+          <span class="step-number">2</span>
+          <h3>Choose a duration</h3>
+          <p>Tap a shortcut or enter an exact number of days, hours, and minutes.</p>
+        </article>
+        <article>
+          <span class="step-number">3</span>
+          <h3>Read the future time</h3>
+          <p>See the resulting clock time, weekday, and calendar date immediately.</p>
+        </article>
+      </div>
+    </section>
+
+    <aside class="ad-slot ad-banner container" aria-label="Advertisement">
+      <span>ADVERTISEMENT</span>
+      <strong>Responsive banner</strong>
+    </aside>
+
+    <section class="content-section container popular-section" aria-labelledby="popular-title">
+      <div class="section-intro compact">
+        <p class="eyebrow">Popular calculations</p>
+        <h2 id="popular-title">Common time-from-now questions</h2>
+      </div>
+      <div class="popular-grid">
+        <button type="button" data-from-example="15">What time will it be in 15 minutes?</button>
+        <button type="button" data-from-example="30">What time will it be in 30 minutes?</button>
+        <button type="button" data-from-example="45">What time will it be in 45 minutes?</button>
+        <button type="button" data-from-example="90">What time will it be in 90 minutes?</button>
+        <button type="button" data-from-example="120">What time will it be in 2 hours?</button>
+        <button type="button" data-from-example="480">What time will it be in 8 hours?</button>
+      </div>
+    </section>
+
+    <section class="content-section container related-tool-section" aria-labelledby="related-tools-title">
+      <div class="section-intro compact">
+        <p class="eyebrow">Related tools</p>
+        <h2 id="related-tools-title">More ways to calculate time</h2>
+      </div>
+      <div class="related-tools-grid">
+        <a class="tool-link-card" href="/time-duration-calculator">
+          <span>
+            <strong>Find hours between two times</strong>
+            <span>Calculate elapsed time, overnight ranges, breaks, and decimal hours.</span>
+          </span>
+          <span class="tool-link-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+        <a class="tool-link-card" href="/">
+          <span>
+            <strong>Choose a different starting time</strong>
+            <span>Add or subtract time from any date and clock time.</span>
+          </span>
+          <span class="tool-link-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="tool-link-card" href="/hours-minutes-calculator">
+          <span>
+            <strong>Combine hours and minutes</strong>
+            <span>Add or subtract multiple elapsed durations.</span>
+          </span>
+          <span class="tool-link-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="content-section container faq-section" id="faq" aria-labelledby="faq-title">
+      <div class="section-intro compact">
+        <p class="eyebrow">FAQ</p>
+        <h2 id="faq-title">Time-from-now questions</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>How do I find what time it will be in 90 minutes?</summary>
+          <p>Tap +90 min, or enter 90 in the Minutes field. The calculator adds 1 hour and 30 minutes to your current local time.</p>
+        </details>
+        <details>
+          <summary>What happens if the future time crosses midnight?</summary>
+          <p>The result automatically moves to the correct next calendar date.</p>
+        </details>
+        <details>
+          <summary>Can I enter more than 59 minutes?</summary>
+          <p>Yes. Values such as 90 or 150 minutes are accepted and normalized automatically.</p>
+        </details>
+        <details>
+          <summary>Which time zone does the calculator use?</summary>
+          <p>It uses the local date and time reported by your device. It does not convert between time zones.</p>
+        </details>
+        <details>
+          <summary>Does the starting time update automatically?</summary>
+          <p>Yes. The current time refreshes each minute, and you can also use Refresh now.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="brand footer-brand" href="/">Time Calculator</a>
+        <p>Fast, focused date and time arithmetic.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <a href="/time-duration-calculator">Time Duration</a>
+        <a href="/time-from-now-calculator" aria-current="page">Time From Now</a>
+        <a href="/hours-minutes-calculator">Hours &amp; Minutes</a>
+        <a href="/about">About</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/zh/45-minutes-later/" lang="zh-Hans" hreflang="zh-Hans">简体中文</a>
+      </nav>
+      <p class="copyright">© <span id="current-year">2026</span> Time Calculator</p>
+    </div>
+  </footer>
+
+  <script src="/time-from-now-calculator.js" defer></script>
+  <script src="/assets/language-switch.js" defer></script>
+</body>
+</html>
+

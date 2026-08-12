@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小时和分钟计算器｜多段时长加减</title>
+  <meta name="description" content="添加或减去多组小时和分钟，立即以时:分、总分钟和十进制小时显示结果。免费使用，无需登录。">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#3157d5">
+  <link rel="canonical" href="https://timecalc.top/zh/hours-minutes-calculator/">
+  <link rel="alternate" hreflang="en" href="https://timecalc.top/hours-minutes-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://timecalc.top/zh/hours-minutes-calculator/">
+  <link rel="alternate" hreflang="x-default" href="https://timecalc.top/hours-minutes-calculator">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Time Calculator">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:title" content="小时和分钟计算器｜多段时长加减">
+  <meta property="og:description" content="添加或减去多组小时和分钟，立即以时:分、总分钟和十进制小时显示结果。">
+  <meta property="og:url" content="https://timecalc.top/zh/hours-minutes-calculator/">
+  <meta property="og:image" content="https://timecalc.top/assets/og-card-zh.png">
+  <meta property="og:image:alt" content="小时和分钟加减计算器">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="小时和分钟计算器｜多段时长加减">
+  <meta name="twitter:description" content="免费添加或减去多组小时和分钟，并查看三种结果格式。">
+  <meta name="twitter:image" content="https://timecalc.top/assets/og-card-zh.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://timecalc.top/zh/hours-minutes-calculator/#webapplication",
+        "url": "https://timecalc.top/zh/hours-minutes-calculator/",
+        "name": "小时和分钟加减计算器",
+        "description": "用于添加或减去多组小时和分钟的免费在线计算器。",
+        "inLanguage": "zh-Hans",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "需要启用 JavaScript",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      },
+      {
+        "@type": "FAQPage",
+        "inLanguage": "zh-Hans",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "什么是时长？",
+            "acceptedAnswer": { "@type": "Answer", "text": "时长是一段经过的时间，例如 2 小时 30 分钟，它不是一天中的具体时刻。" }
+          },
+          {
+            "@type": "Question",
+            "name": "可以计算两段以上的时长吗？",
+            "acceptedAnswer": { "@type": "Answer", "text": "可以。你可以添加多行，并分别选择每段时长是相加还是相减。" }
+          },
+          {
+            "@type": "Question",
+            "name": "分钟可以大于 59 吗？",
+            "acceptedAnswer": { "@type": "Answer", "text": "可以。例如输入 90 分钟，会自动按 1 小时 30 分钟计入结果。" }
+          },
+          {
+            "@type": "Question",
+            "name": "十进制小时怎样计算？",
+            "acceptedAnswer": { "@type": "Answer", "text": "将总分钟数除以 60。例如 7 小时 15 分钟等于 7.25 十进制小时。" }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#duration-calculator">跳到计算器</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/zh/" aria-label="Time Calculator 中文首页">
+        <span class="brand-mark" aria-hidden="true"><span class="brand-hand"></span></span>
+        <span>Time Calculator</span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="/zh/">时间计算</a>
+        <a href="/zh/time-duration-calculator/">时间间隔</a>
+        <a href="/zh/45-minutes-later/">从现在起</a>
+        <a href="#how-it-works">使用方法</a>
+        <a href="#faq">常见问题</a>
+        <a class="language-link" data-language-switch href="/hours-minutes-calculator" hreflang="en" lang="en">English</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero duration-hero container" aria-labelledby="page-title">
+      <p class="eyebrow">免费时长工具</p>
+      <h1 id="page-title">小时和分钟加减计算器</h1>
+      <p class="hero-copy">添加或减去任意多段时长，并立即查看时:分、总分钟和十进制小时三种结果。</p>
+    </section>
+
+    <div class="container calculator-layout duration-layout">
+      <section class="calculator-card duration-calculator-card" id="duration-calculator" aria-label="小时和分钟计算器">
+        <div class="section-heading duration-section-heading">
+          <div>
+            <p class="duration-card-title">建立你的计算</p>
+            <p class="duration-card-copy">点击快捷时长或调整任意一行。分钟可以直接输入 90 这类大于 59 的数值。</p>
+          </div>
+          <button class="text-button" id="reset-durations" type="button">重置</button>
+        </div>
+
+        <div class="duration-quick-grid" role="group" aria-label="快速添加时长">
+          <button type="button" class="quick-button" data-quick-hours="0" data-quick-minutes="15">+ 15 分钟</button>
+          <button type="button" class="quick-button" data-quick-hours="0" data-quick-minutes="30">+ 30 分钟</button>
+          <button type="button" class="quick-button" data-quick-hours="1" data-quick-minutes="0">+ 1 小时</button>
+          <button type="button" class="quick-button" data-quick-hours="8" data-quick-minutes="0">+ 8 小时</button>
+        </div>
+
+        <div class="duration-list" id="duration-list" aria-label="要计算的时长"></div>
+
+        <button class="add-duration-button" id="add-duration" type="button">
+          <span aria-hidden="true">+</span>
+          再加一段时长
+        </button>
+
+        <section class="result-panel duration-result-panel" aria-labelledby="duration-result-heading">
+          <p class="result-kicker" id="duration-result-heading">总时长</p>
+          <output class="result-primary duration-result-primary" id="duration-result-hmm" aria-live="polite" aria-atomic="true">1:30</output>
+          <div class="duration-result-grid">
+            <div class="duration-metric">
+              <span>总分钟</span>
+              <strong id="duration-result-minutes">90</strong>
+            </div>
+            <div class="duration-metric">
+              <span>十进制小时</span>
+              <strong id="duration-result-decimal">1.50</strong>
+            </div>
+          </div>
+          <div class="result-actions">
+            <button class="primary-button" id="copy-duration-result" type="button">
+              <span aria-hidden="true">▣</span>
+              <span class="copy-label">复制结果</span>
+            </button>
+          </div>
+        </section>
+
+        <p class="local-note">大于 59 的分钟会自动换算；结果也可以是负数。</p>
+        <noscript><p class="noscript-message">使用互动计算器需要启用 JavaScript。下方说明和示例仍可阅读。</p></noscript>
+      </section>
+
+      <aside class="ad-slot ad-rail" aria-label="广告位">
+        <span>广告</span>
+        <strong>300 × 250</strong>
+      </aside>
+    </div>
+
+    <section class="content-section container" id="how-it-works" aria-labelledby="how-title">
+      <div class="section-intro">
+        <p class="eyebrow">使用方法</p>
+        <h2 id="how-title">把多段经过时间相加或相减</h2>
+        <p>每一行代表一段时长。选择加或减，再按照需要读取三种格式的合计结果。</p>
+      </div>
+      <div class="steps-grid">
+        <article>
+          <span class="step-number">1</span>
+          <h3>输入一段时长</h3>
+          <p>填写小时和分钟；也可以在分钟框直接输入 90。</p>
+        </article>
+        <article>
+          <span class="step-number">2</span>
+          <h3>选择相加或相减</h3>
+          <p>默认是相加；点击每行的操作按钮即可切换为相减。</p>
+        </article>
+        <article>
+          <span class="step-number">3</span>
+          <h3>读取所需格式</h3>
+          <p>结果会同时显示为时:分、总分钟和十进制小时，并可一次复制。</p>
+        </article>
+      </div>
+    </section>
+
+    <aside class="ad-slot ad-banner container" aria-label="广告位">
+      <span>广告</span>
+      <strong>自适应横幅</strong>
+    </aside>
+
+    <section class="content-section container" aria-labelledby="examples-title">
+      <div class="section-intro compact">
+        <p class="eyebrow">示例</p>
+        <h2 id="examples-title">常见的时长加减计算</h2>
+      </div>
+      <div class="examples-grid">
+        <article class="example-card">
+          <strong>2:35 + 1:50 = 4:25</strong>
+          <p>共 265 分钟，也就是 4.42 十进制小时。</p>
+        </article>
+        <article class="example-card">
+          <strong>8:00 − 0:45 = 7:15</strong>
+          <p>共 435 分钟，也就是 7.25 十进制小时。</p>
+        </article>
+        <article class="example-card">
+          <strong>1:20 + 0:55 + 2:10 = 4:25</strong>
+          <p>可以在同一次计算中合并三段或更多正时长。</p>
+        </article>
+        <article class="example-card">
+          <strong>0:30 − 1:15 = −0:45</strong>
+          <p>被减去的时长较大时，计算结果会是负数。</p>
+        </article>
+      </div>
+      <div class="formula-card">
+        <div>
+          <p class="eyebrow">计算公式</p>
+          <h3>先把所有时长换算成分钟</h3>
+        </div>
+        <p>每行小时数乘以 60，再加上分钟并应用正负号。最终总数除以 60 得到十进制小时；用 60 做带余数的除法得到时:分。</p>
+      </div>
+    </section>
+
+    <section class="content-section container related-tool-section" aria-labelledby="related-title">
+      <div class="section-intro compact">
+        <p class="eyebrow">相关工具</p>
+        <h2 id="related-title">还需要计算具体时刻？</h2>
+      </div>
+      <div class="related-tools-grid">
+        <a class="tool-link-card" href="/zh/time-duration-calculator/">
+          <span><strong>计算两个时刻之间的时长</strong><span>计算经过的时间，也能处理跨夜和扣除休息时间。</span></span>
+          <span class="tool-link-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="tool-link-card" href="/zh/45-minutes-later/">
+          <span><strong>计算从现在起的时间</strong><span>查看再过任意分钟、小时或天数后是几点。</span></span>
+          <span class="tool-link-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="tool-link-card" href="/zh/time-chain-calculator/">
+          <span><strong>安排多步骤时间链</strong><span>连续添加活动与休息，并查看每一步的开始和结束时间。</span></span>
+          <span class="tool-link-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="content-section container faq-section" id="faq" aria-labelledby="faq-title">
+      <div class="section-intro compact">
+        <p class="eyebrow">常见问题</p>
+        <h2 id="faq-title">关于小时和分钟计算</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>什么是时长？</summary>
+          <p>时长是一段经过的时间，例如 2 小时 30 分钟，它不是一天中的具体时刻。</p>
+        </details>
+        <details>
+          <summary>可以计算两段以上的时长吗？</summary>
+          <p>可以。按需添加任意多行，并分别选择每段时长是相加还是相减。</p>
+        </details>
+        <details>
+          <summary>分钟可以大于 59 吗？</summary>
+          <p>可以。例如输入 90 分钟，会自动按 1 小时 30 分钟计入结果。</p>
+        </details>
+        <details>
+          <summary>十进制小时怎样计算？</summary>
+          <p>计算器会用总分钟数除以 60。例如 7 小时 15 分钟等于 7.25 十进制小时。</p>
+        </details>
+        <details>
+          <summary>这个计算器会处理日期或时区吗？</summary>
+          <p>不会。它只计算经过的时长。如需在某个日期或时刻上加减时间，请使用<a href="/zh/">主时间计算器</a>。</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="brand footer-brand" href="/zh/">Time Calculator</a>
+        <p>快速、专注的日期与时间计算工具。</p>
+      </div>
+      <nav aria-label="页脚导航">
+        <a href="/zh/time-duration-calculator/">时间间隔</a>
+        <a href="/zh/45-minutes-later/">从现在起</a>
+        <a href="/zh/hours-minutes-calculator/" aria-current="page">小时与分钟</a>
+        <a href="/zh/time-chain-calculator/">时间链</a>
+        <a data-language-switch href="/hours-minutes-calculator" hreflang="en" lang="en">English</a>
+      </nav>
+      <p class="copyright">© <span id="current-year">2026</span> Time Calculator</p>
+    </div>
+  </footer>
+
+  <script src="/zh/hours-minutes-calculator.js" defer></script>
+  <script src="/assets/language-switch.js" defer></script>
+</body>
+</html>

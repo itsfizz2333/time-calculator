@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>算到几点·时间接龙｜时间加减、累计与倒推计算</title>
+  <meta name="description" content="从现在或任意时间开始，逐段添加游泳、休息、吃饭、路程等时长，自动算出每一步和最终几点；也能倒推最晚出发时间。免费、免登录。">
+  <meta name="theme-color" content="#123c36">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://timecalc.top/zh/">
+  <link rel="alternate" hreflang="en" href="https://timecalc.top/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://timecalc.top/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://timecalc.top/">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/icon-192.png">
+  <link rel="manifest" href="/zh/site.webmanifest">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:site_name" content="算到几点">
+  <meta property="og:title" content="算到几点 · 时间接龙">
+  <meta property="og:description" content="一段一段，算出最后到几点。支持正向、多段累计与倒推。">
+  <meta property="og:url" content="https://timecalc.top/zh/">
+  <meta property="og:image" content="https://timecalc.top/assets/og-card-zh.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="算到几点 · 时间接龙：正向、累计与倒推时间">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://timecalc.top/assets/og-card-zh.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://timecalc.top/zh/#website",
+        "url": "https://timecalc.top/zh/",
+        "name": "算到几点",
+        "inLanguage": "zh-CN"
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://timecalc.top/zh/#app",
+        "name": "算到几点 · 时间接龙",
+        "url": "https://timecalc.top/zh/",
+        "description": "时间加减、多段累计与倒推计算工具。",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "inLanguage": "zh-CN",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "这个工具和普通时间计算器有什么不同？",
+            "acceptedAnswer": { "@type": "Answer", "text": "普通时间计算器通常只给出一道加减题的答案。时间接龙会保留每一段安排，并显示完整的起止时间和最终完成时间。" }
+          },
+          {
+            "@type": "Question",
+            "name": "计算跨过午夜会怎样？",
+            "acceptedAnswer": { "@type": "Answer", "text": "结果会继续计算，并明确标记昨天、今天或明天。例如23:40再过45分钟会显示为明天00:25。" }
+          },
+          {
+            "@type": "Question",
+            "name": "活动名称必须填写吗？",
+            "acceptedAnswer": { "@type": "Answer", "text": "不必。只填写时长也能计算；添加游泳、吃饭等名称只是为了让时间线更容易看懂。" }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#calculator">跳到计算器</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="./" aria-label="算到几点首页"><span class="brand__mark" aria-hidden="true">◷</span><span>算到几点 <span class="brand__suffix">· 时间接龙</span></span></a>
+      <nav class="site-nav" aria-label="主要导航">
+        <a href="/zh/45-minutes-later/">时间加减</a>
+        <a href="/zh/time-duration-calculator/">时间间隔</a>
+        <a href="/zh/time-chain-calculator/">多段累计</a>
+        <a class="nav-priority" href="/zh/leave-time-calculator/">倒推时间</a>
+        <a class="language-switch" href="/" lang="en" hreflang="en" data-language-switch>English</a><button class="theme-toggle" type="button" data-theme-toggle aria-label="切换深色模式">☾</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-shell">
+    <section class="hero">
+      <p class="eyebrow">免费 · 免登录 · 本地计算</p>
+      <h1>一段一段，算出最后到几点</h1>
+      <p>从现在或任意时间开始，逐段添加游泳、休息、吃饭和路程。每一段何时开始、何时结束，以及全部完成的时间都会自动算好。</p>
+      <p class="hero__example">例如：17:00 游泳45分 → 休息15分 → 晚饭1小时 → 19:30 到家</p>
+    </section>
+
+    <section class="tool-frame" id="calculator" aria-label="时间接龙计算器">
+      <div data-time-chain-app data-preset="home"></div>
+      <noscript><p class="noscript-note">计算器需要开启 JavaScript。示例：17:00 + 游泳45分钟 + 休息15分钟 + 晚饭60分钟 + 回家30分钟 = 19:30。</p></noscript>
+    </section>
+
+    <section class="content-section">
+      <p class="eyebrow">为什么更好用</p>
+      <h2>不只给一个答案，还把过程排清楚</h2>
+      <p>普通计算器适合一道加减题；真实生活往往是一串事情。时间接龙把它们放进同一条时间线，中间任何一步变化，后面的时间都会自动更新。</p>
+      <div class="feature-grid">
+        <article class="feature-card"><h3>正向累加</h3><p>选择现在或任意开始时间，连续添加多段活动，直接看到最终几点完成。</p></article>
+        <article class="feature-card"><h3>从目标倒推</h3><p>知道必须几点到达，就把路程、准备和预留时间加进去，倒推出最晚几点开始。</p></article>
+        <article class="feature-card"><h3>处理不确定性</h3><p>为某一段填写最短与最长用时，结果会显示完成窗口，而不是假装只有一个准确答案。</p></article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <p class="eyebrow">三个独立工具</p>
+      <h2>从一道题，到整条日程</h2>
+      <div class="link-grid">
+        <a class="link-card" href="/zh/45-minutes-later/"><h3>几分钟后是几点</h3><p>计算4:45再过45分钟、现在过2个半小时，支持跨午夜提示。</p><p class="link-card__arrow">打开时间加减 →</p></a>
+        <a class="link-card" href="/zh/time-chain-calculator/"><h3>多段时间累计</h3><p>把游泳、休息、晚饭和回家逐段加入，一次看清全部时间。</p><p class="link-card__arrow">打开多段累计 →</p></a>
+        <a class="link-card" href="/zh/leave-time-calculator/"><h3>最晚几点出发</h3><p>从到达时间倒推路程、停车、准备和缓冲，避免临出门再心算。</p><p class="link-card__arrow">打开倒推计算 →</p></a>
+        <a class="link-card" href="/zh/time-duration-calculator/"><h3>两个时间相差多久</h3><p>输入开始和结束时间，支持跨午夜、扣除休息，并显示总分钟。</p><p class="link-card__arrow">打开时间间隔 →</p></a>
+        <a class="link-card" href="/zh/hours-minutes-calculator/"><h3>多段小时分钟加减</h3><p>添加或减去多组时长，查看时:分、总分钟与十进制小时。</p><p class="link-card__arrow">打开时长加减 →</p></a>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <p class="eyebrow">真实场景</p>
+      <h2>计划变了，也不用从头算</h2>
+      <div class="example-grid">
+        <article class="example-card"><h3>健身后几点到家</h3><p>17:00开始，游泳45分、休息15分、晚饭60分、回家30分。</p><p class="example-result">19:30</p></article>
+        <article class="example-card"><h3>23:40再过45分钟</h3><p>自动处理分钟进位与跨日，不会只显示一个容易看错的00:25。</p><p class="example-result">明天 00:25</p></article>
+        <article class="example-card"><h3>19:30前必须到达</h3><p>路程40分、停车10分、手续30分、预留15分，总计1小时35分。</p><p class="example-result">17:55 开始</p></article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <p class="eyebrow">常见问题</p>
+      <h2>关于时间接龙</h2>
+      <div class="faq-list">
+        <details><summary>这个工具和普通时间计算器有什么不同？</summary><p>普通时间计算器通常只给出一道加减题的答案。时间接龙会保留每一段安排，并显示完整的起止时间和最终完成时间。</p></details>
+        <details><summary>计算跨过午夜会怎样？</summary><p>结果会继续计算，并明确标记昨天、今天或明天。例如23:40再过45分钟会显示为明天00:25。</p></details>
+        <details><summary>活动名称必须填写吗？</summary><p>不必。只填写时长也能计算；添加游泳、吃饭等名称只是为了让时间线更容易看懂。</p></details>
+        <details><summary>计划会上传到服务器吗？</summary><p>当前版本在浏览器本地计算和保存，不要求账号。分享时，计划写在链接的井号（#）后，普通网页请求不会把这部分发送给服务器。</p></details>
+      </div>
+    </section>
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div><strong>算到几点 · 时间接龙</strong><br>把时间安排得明明白白。</div>
+      <div class="footer-links"><a href="/zh/45-minutes-later/">时间加减</a><a href="/zh/time-duration-calculator/">时间间隔</a><a href="/zh/time-chain-calculator/">多段累计</a><a href="/zh/leave-time-calculator/">倒推时间</a><a href="/zh/about/">关于</a><a href="/zh/privacy/">隐私</a></div>
+      <div><a href="/" lang="en" hreflang="en">English</a> · © 2026 TimeCalc</div>
+    </div>
+  </footer>
+
+  <script src="/assets/config.zh.js"></script>
+  <script src="/assets/app.zh.js"></script>
+  <script src="/assets/language-switch.js"></script>
+</body>
+</html>

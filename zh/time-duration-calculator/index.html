@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>时间间隔计算器｜两个时间相差几小时几分钟</title>
+  <meta name="description" content="输入开始和结束时间，计算两者相差的小时和分钟；支持跨午夜、扣除休息时间，并显示总分钟和十进制小时。">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#3157d5">
+  <link rel="canonical" href="https://timecalc.top/zh/time-duration-calculator/">
+  <link rel="alternate" hreflang="en" href="https://timecalc.top/time-duration-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://timecalc.top/zh/time-duration-calculator/">
+  <link rel="alternate" hreflang="x-default" href="https://timecalc.top/time-duration-calculator">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="时间计算器">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:title" content="时间间隔计算器｜两个时间相差几小时几分钟">
+  <meta property="og:description" content="输入开始和结束时间，快速计算相差多久；支持跨午夜和扣除休息时间。">
+  <meta property="og:url" content="https://timecalc.top/zh/time-duration-calculator/">
+  <meta property="og:image" content="https://timecalc.top/assets/og-card-zh.png">
+  <meta property="og:image:alt" content="计算两个时间相差几小时几分钟的时间间隔计算器">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="时间间隔计算器">
+  <meta name="twitter:description" content="计算两个时间之间的小时、分钟、总分钟和十进制小时。">
+  <meta name="twitter:image" content="https://timecalc.top/assets/og-card-zh.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://timecalc.top/zh/time-duration-calculator/#webapplication",
+        "url": "https://timecalc.top/zh/time-duration-calculator/",
+        "name": "时间间隔计算器",
+        "description": "计算两个时间相差的小时和分钟，支持跨午夜、扣除休息时间、总分钟与十进制小时。",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "需要启用 JavaScript",
+        "inLanguage": "zh-CN",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "CNY"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "inLanguage": "zh-CN",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "怎样计算两个时间相差多久？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "把开始和结束时间都换算成从午夜开始经过的分钟数，再用结束时间减去开始时间，最后换算回小时和分钟。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "可以计算跨午夜的时间吗？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "可以。当结束时间早于开始时间时，计算器会把结束时间视为第二天。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "可以扣除午休或其他休息时间吗？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "可以。在休息时间输入分钟数，该时长会从原始时间间隔中扣除。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "十进制小时是什么意思？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "十进制小时把分钟表示成一小时的小数部分。例如7小时15分钟等于7.25小时。"
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#time-duration-calculator">跳到计算器</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/zh/" aria-label="时间计算器首页">
+        <span class="brand-mark" aria-hidden="true">
+          <span class="brand-hand"></span>
+        </span>
+        <span>时间计算器</span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="/zh/">日期与时间</a>
+        <a href="/zh/time-duration-calculator/" aria-current="page">时间间隔</a>
+        <a href="/zh/45-minutes-later/">从现在开始</a>
+        <a href="/zh/hours-minutes-calculator/">小时与分钟</a>
+        <a href="#faq">常见问题</a>
+        <a class="language-link" href="/time-duration-calculator" lang="en" hreflang="en" data-language-switch>English</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero duration-hero container" aria-labelledby="page-title">
+      <p class="eyebrow">免费时间间隔工具</p>
+      <h1 id="page-title">两个时间相差多久？</h1>
+      <p class="hero-copy">输入开始和结束时间，立即得到相差的小时和分钟。跨午夜和扣除休息时间都会自动处理。</p>
+    </section>
+
+    <div class="container calculator-layout duration-layout">
+      <section class="calculator-card time-duration-card" id="time-duration-calculator" aria-label="时间间隔计算器">
+        <div class="section-heading duration-section-heading">
+          <div>
+            <p class="duration-card-title">输入开始和结束时间</p>
+            <p class="duration-card-copy">如果结束时间早于开始时间，将自动按第二天计算。</p>
+          </div>
+          <button class="text-button" id="reset-time-duration" type="button">重置</button>
+        </div>
+
+        <div class="time-range-grid">
+          <label class="time-range-field" for="duration-start-time">
+            <span>开始时间</span>
+            <input type="time" id="duration-start-time" value="09:00" step="60">
+          </label>
+          <label class="time-range-field" for="duration-end-time">
+            <span>结束时间</span>
+            <input type="time" id="duration-end-time" value="17:30" step="60">
+          </label>
+        </div>
+
+        <label class="break-field" for="duration-break-minutes">
+          <span>
+            <strong>休息时间</strong>
+            <small>可选，输入需要扣除的分钟数</small>
+          </span>
+          <span class="break-input-wrap">
+            <input type="number" id="duration-break-minutes" inputmode="numeric" min="0" max="1440" step="1" value="0">
+            <span>分钟</span>
+          </span>
+        </label>
+
+        <div class="duration-quick-grid time-duration-presets" role="group" aria-label="时间间隔示例">
+          <button type="button" class="quick-button" data-start="09:30" data-end="17:15" data-break="0">09:30－17:15</button>
+          <button type="button" class="quick-button" data-start="09:00" data-end="17:30" data-break="30">工作日扣除30分钟</button>
+          <button type="button" class="quick-button" data-start="23:00" data-end="06:00" data-break="0">23:00－次日06:00</button>
+          <button type="button" class="quick-button" data-start="14:20" data-end="16:05" data-break="0">14:20－16:05</button>
+        </div>
+
+        <section class="result-panel time-duration-result-panel" aria-labelledby="time-duration-result-heading">
+          <p class="result-kicker" id="time-duration-result-heading">相差时间</p>
+          <output class="result-primary duration-result-primary" id="time-duration-result" aria-live="polite" aria-atomic="true">8小时30分钟</output>
+          <p class="result-full" id="time-duration-summary">09:00 到 17:30</p>
+          <div class="duration-result-grid">
+            <div class="duration-metric">
+              <span>总分钟</span>
+              <strong id="time-duration-minutes">510</strong>
+            </div>
+            <div class="duration-metric">
+              <span>十进制小时</span>
+              <strong id="time-duration-decimal">8.50</strong>
+            </div>
+          </div>
+          <p class="time-duration-warning" id="time-duration-warning" hidden></p>
+          <div class="result-actions">
+            <button class="primary-button" id="copy-time-duration" type="button">
+              <span aria-hidden="true">■</span>
+              <span class="copy-label">复制结果</span>
+            </button>
+          </div>
+        </section>
+
+        <p class="local-note">计算全部在你的浏览器中完成，时间不会保存或上传。</p>
+        <noscript><p class="noscript-message">互动计算器需要启用 JavaScript，下方示例和公式仍可阅读。</p></noscript>
+      </section>
+
+      <aside class="ad-slot ad-rail" aria-label="广告位">
+        <span>广告</span>
+        <strong>300 × 250</strong>
+      </aside>
+    </div>
+
+    <section class="content-section container" id="how-it-works" aria-labelledby="how-title">
+      <div class="section-intro">
+        <p class="eyebrow">使用方法</p>
+        <h2 id="how-title">计算两个时间相差几小时几分钟</h2>
+        <p>输入开始和结束时间，需要时再填写休息分钟数。结果会同时显示小时和分钟、总分钟与十进制小时。</p>
+      </div>
+      <div class="steps-grid">
+        <article>
+          <span class="step-number">1</span>
+          <h3>选择两个时间</h3>
+          <p>填写这段时间的开始时刻与结束时刻。</p>
+        </article>
+        <article>
+          <span class="step-number">2</span>
+          <h3>扣除休息时间</h3>
+          <p>如有午休或其他不计入的时间，输入对应分钟数。</p>
+        </article>
+        <article>
+          <span class="step-number">3</span>
+          <h3>查看时间间隔</h3>
+          <p>排日程可用小时和分钟，填工时表可用十进制小时。</p>
+        </article>
+      </div>
+    </section>
+
+    <aside class="ad-slot ad-banner container" aria-label="广告位">
+      <span>广告</span>
+      <strong>自适应横幅</strong>
+    </aside>
+
+    <section class="content-section container" aria-labelledby="examples-title">
+      <div class="section-intro compact">
+        <p class="eyebrow">示例</p>
+        <h2 id="examples-title">常见的时间间隔计算</h2>
+      </div>
+      <div class="examples-grid">
+        <article class="example-card">
+          <strong>09:30 到 17:15 = 7小时45分钟</strong>
+          <p>同一天内、不扣休息时间的工作时段。</p>
+        </article>
+        <article class="example-card">
+          <strong>09:00 到 17:30，扣30分钟 = 8小时</strong>
+          <p>从完整时段中扣除不计入的午休时间。</p>
+        </article>
+        <article class="example-card">
+          <strong>23:00 到次日06:00 = 7小时</strong>
+          <p>跨午夜时，结束时间会自动顺延到第二天。</p>
+        </article>
+        <article class="example-card">
+          <strong>14:20 到 16:05 = 1小时45分钟</strong>
+          <p>这段下午时段一共是105分钟。</p>
+        </article>
+      </div>
+      <div class="formula-card">
+        <div>
+          <p class="eyebrow">计算公式</p>
+          <h3>结束时间 − 开始时间 − 休息时间</h3>
+        </div>
+        <p>先把两个时刻换算成当天午夜后的分钟数。若跨午夜则为结束时间加1,440分钟，扣除休息时间后，再除以60得到小时。</p>
+      </div>
+    </section>
+
+    <section class="content-section container related-tool-section" aria-labelledby="related-title">
+      <div class="section-intro compact">
+        <p class="eyebrow">相关工具</p>
+        <h2 id="related-title">更多时间计算方式</h2>
+      </div>
+      <div class="related-tools-grid">
+        <a class="tool-link-card" href="/zh/hours-minutes-calculator/">
+          <span>
+            <strong>多个时长相加或相减</strong>
+            <span>一次组合多组小时和分钟。</span>
+          </span>
+          <span class="tool-link-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="tool-link-card" href="/zh/45-minutes-later/">
+          <span>
+            <strong>计算一段时间后是几点</strong>
+            <span>输入任意分钟、小时或天数，得到未来时刻。</span>
+          </span>
+          <span class="tool-link-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="content-section container faq-section" id="faq" aria-labelledby="faq-title">
+      <div class="section-intro compact">
+        <p class="eyebrow">常见问题</p>
+        <h2 id="faq-title">时间间隔计算问题</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>怎样计算两个时间相差多久？</summary>
+          <p>把开始和结束时间都换算成从午夜开始经过的分钟数，再相减并换算回小时和分钟。这个计算器会自动完成换算。</p>
+        </details>
+        <details>
+          <summary>可以计算跨午夜的时间吗？</summary>
+          <p>可以。当结束时间早于开始时间时，计算器会把结束时间视为第二天。</p>
+        </details>
+        <details>
+          <summary>可以扣除午休或其他休息时间吗？</summary>
+          <p>可以。在休息时间中输入分钟数，该时长会从原始时间间隔中扣除。</p>
+        </details>
+        <details>
+          <summary>十进制小时是什么意思？</summary>
+          <p>十进制小时把分钟表示成一小时的小数部分。例如7小时15分钟等于7.25小时。</p>
+        </details>
+        <details>
+          <summary>如果休息时间比整个时段还长会怎样？</summary>
+          <p>结果会限制为零，同时显示提示，方便你检查并修正输入。</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="brand footer-brand" href="/zh/">时间计算器</a>
+        <p>快捷、专注的日期与时间计算工具。</p>
+      </div>
+      <nav aria-label="页脚导航">
+        <a href="/zh/time-duration-calculator/" aria-current="page">时间间隔</a>
+        <a href="/zh/45-minutes-later/">从现在开始</a>
+        <a href="/zh/hours-minutes-calculator/">小时与分钟</a>
+        <a href="/zh/about/">关于</a>
+        <a href="/zh/privacy/">隐私</a>
+        <a href="/zh/terms/">条款</a>
+        <a href="/time-duration-calculator" lang="en" hreflang="en" data-language-switch>English</a>
+      </nav>
+      <p class="copyright">© <span id="current-year">2026</span> Time Calculator</p>
+    </div>
+  </footer>
+
+  <script src="/zh/time-duration-calculator.js" defer></script>
+  <script src="/assets/language-switch.js" defer></script>
+</body>
+</html>

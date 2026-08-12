@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-Hans">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -7,18 +7,22 @@
   <meta name="description" content="输入必须到达或结束的时间，再添加路程、准备和预留时长，自动倒推每一步和最晚开始时间。适合赶飞机、上课与赴约。">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#123c36">
-  <link rel="canonical" href="https://timecalc.top/leave-time-calculator/">
-  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="../assets/icon-192.png">
-  <link rel="manifest" href="../site.webmanifest">
-  <link rel="stylesheet" href="../assets/styles.css">
-  <meta property="og:type" content="website"><meta property="og:locale" content="zh_CN"><meta property="og:site_name" content="算到几点">
-  <meta property="og:title" content="最晚几点出发？倒推时间计算器"><meta property="og:description" content="从必须到达的时间，反推准备、路程和预留时间。"><meta property="og:url" content="https://timecalc.top/leave-time-calculator/"><meta property="og:image" content="https://timecalc.top/assets/og-card.png">
+  <link rel="canonical" href="https://timecalc.top/zh/leave-time-calculator/">
+  <link rel="alternate" hreflang="en" href="https://timecalc.top/leave-time-calculator">
+  <link rel="alternate" hreflang="zh-Hans" href="https://timecalc.top/zh/leave-time-calculator/">
+  <link rel="alternate" hreflang="x-default" href="https://timecalc.top/leave-time-calculator">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/icon-192.png">
+  <link rel="manifest" href="/zh/site.webmanifest">
+  <link rel="stylesheet" href="/assets/styles.css">
+  <meta property="og:type" content="website"><meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="en_US"><meta property="og:site_name" content="算到几点">
+  <meta property="og:title" content="最晚几点出发？倒推时间计算器"><meta property="og:description" content="从必须到达的时间，反推准备、路程和预留时间。"><meta property="og:url" content="https://timecalc.top/zh/leave-time-calculator/"><meta property="og:image" content="https://timecalc.top/assets/og-card-zh.png">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[
-    {"@type":"WebPage","name":"最晚几点出发？倒推时间计算器","url":"https://timecalc.top/leave-time-calculator/","inLanguage":"zh-CN"},
-    {"@type":"WebApplication","name":"倒推时间计算器","url":"https://timecalc.top/leave-time-calculator/","description":"根据目标时间和多个步骤，倒推建议开始与最晚开始时间。","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","inLanguage":"zh-CN","offers":{"@type":"Offer","price":"0","priceCurrency":"CNY"}},
-    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://timecalc.top/"},{"@type":"ListItem","position":2,"name":"倒推时间","item":"https://timecalc.top/leave-time-calculator/"}]},
+    {"@type":"WebPage","name":"最晚几点出发？倒推时间计算器","url":"https://timecalc.top/zh/leave-time-calculator/","inLanguage":"zh-CN"},
+    {"@type":"WebApplication","name":"倒推时间计算器","url":"https://timecalc.top/zh/leave-time-calculator/","description":"根据目标时间和多个步骤，倒推建议开始与最晚开始时间。","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","inLanguage":"zh-CN","offers":{"@type":"Offer","price":"0","priceCurrency":"CNY"}},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://timecalc.top/zh/"},{"@type":"ListItem","position":2,"name":"倒推时间","item":"https://timecalc.top/zh/leave-time-calculator/"}]},
     {"@type":"FAQPage","mainEntity":[
       {"@type":"Question","name":"倒推时间和倒计时有什么区别？","acceptedAnswer":{"@type":"Answer","text":"倒计时显示距离某个时刻还有多久；倒推计算根据多个步骤的时长，算出最晚应该何时开始。"}},
       {"@type":"Question","name":"预留时间应该加在哪里？","acceptedAnswer":{"@type":"Answer","text":"可以把预留时间作为独立的一段加入。这样既能看到必要用时，也能清楚知道留了多少缓冲。"}},
@@ -29,7 +33,7 @@
 </head>
 <body>
   <a class="skip-link" href="#calculator">跳到计算器</a>
-  <header class="site-header"><div class="site-header__inner"><a class="brand" href="../"><span class="brand__mark" aria-hidden="true">◷</span><span>算到几点 <span class="brand__suffix">· 时间接龙</span></span></a><nav class="site-nav" aria-label="主要导航"><a href="../45-minutes-later/">时间加减</a><a href="../time-chain-calculator/">多段累计</a><a class="nav-priority" aria-current="page" href="./">倒推时间</a><button class="theme-toggle" type="button" data-theme-toggle aria-label="切换深色模式">☾</button></nav></div></header>
+  <header class="site-header"><div class="site-header__inner"><a class="brand" href="/zh/"><span class="brand__mark" aria-hidden="true">◷</span><span>算到几点 <span class="brand__suffix">· 时间接龙</span></span></a><nav class="site-nav" aria-label="主要导航"><a href="/zh/45-minutes-later/">时间加减</a><a href="/zh/time-chain-calculator/">多段累计</a><a class="nav-priority" aria-current="page" href="./">倒推时间</a><a class="language-switch" href="/leave-time-calculator" lang="en" hreflang="en" data-language-switch>English</a><button class="theme-toggle" type="button" data-theme-toggle aria-label="切换深色模式">☾</button></nav></div></header>
   <div class="page-shell">
     <section class="hero"><p class="eyebrow">倒推时间计算器</p><h1>必须几点到？倒推几点开始</h1><p>先填写必须到达或结束的时间，再按实际顺序添加准备、路程和预留时长。网站会从目标时间反推完整计划。</p><p class="hero__example">19:30到达 − 路程40分 − 停车10分 − 手续30分 − 预留15分 = 17:55开始</p></section>
     <section class="tool-frame" id="calculator" aria-label="倒推时间计算器"><div data-time-chain-app data-preset="backward"></div><noscript><p class="noscript-note">计算器需要开启 JavaScript。示例：19:30前到达，总用时95分钟，最晚17:55开始。</p></noscript></section>
@@ -37,7 +41,8 @@
     <section class="content-section"><p class="eyebrow">留出余量</p><h2>把“预留时间”单独写出来</h2><p>最晚时间只保证刚好完成。赶飞机、赴约和重要课程最好把堵车、排队或临时变化作为独立的一段，这样能清楚看见自己到底留了多少余量。</p><p>如果某段路程可能需要30到50分钟，可以打开“时间范围”。倒推结果会同时显示稳妥开始与最晚开始，而不是给一个看似精确的数字。</p></section>
     <section class="content-section"><p class="eyebrow">常见问题</p><h2>倒推时间问题</h2><div class="faq-list"><details><summary>倒推时间和倒计时有什么区别？</summary><p>倒计时显示距离某个时刻还有多久；倒推计算根据多个步骤的时长，算出最晚应该何时开始。</p></details><details><summary>预留时间应该加在哪里？</summary><p>可以把预留时间作为独立的一段加入。这样既能看到必要用时，也能清楚知道留了多少缓冲。</p></details><details><summary>倒推结果可以跨到前一天吗？</summary><p>可以。若目标时间较早、所需时长较长，结果会明确标记为昨天或更早日期。</p></details></div></section>
   </div>
-  <footer class="site-footer"><div class="site-footer__inner"><div><strong>算到几点</strong><br>免费时间计算工具</div><div class="footer-links"><a href="../">首页</a><a href="../45-minutes-later/">时间加减</a><a href="../time-chain-calculator/">多段累计</a></div><div>© 2026 · 原型版</div></div></footer>
-  <script src="../assets/config.js"></script><script src="../assets/app.js"></script>
+  <footer class="site-footer"><div class="site-footer__inner"><div><strong>算到几点</strong><br>免费时间计算工具</div><div class="footer-links"><a href="/zh/">首页</a><a href="/zh/45-minutes-later/">时间加减</a><a href="/zh/time-chain-calculator/">多段累计</a></div><div><a href="/leave-time-calculator" lang="en" hreflang="en">English</a> · © 2026 TimeCalc</div></div></footer>
+  <script src="/assets/config.zh.js"></script><script src="/assets/app.zh.js"></script>
+  <script src="/assets/language-switch.js"></script>
 </body>
 </html>
