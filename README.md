@@ -1,13 +1,13 @@
-# TimeCalc bilingual preview
+# TimeCalc bilingual website
 
-Static bilingual preview for `timecalc.top`.
+Static bilingual website for `timecalc.top`.
 
 - Existing English calculator URLs remain unchanged.
 - English advanced tools: `/time-chain-calculator` and `/leave-time-calculator`.
 - Simplified Chinese pages live under `/zh/`.
 - Shareable advanced plans use the URL hash and language switching preserves `#p=` state.
 - No service worker is registered, so the advanced tools cannot take over the existing English site cache.
-- `_headers` intentionally sends `X-Robots-Tag: noindex, nofollow, noarchive` on the preview deployment. Delete that header before production deployment.
+- Production responses include security headers but no global `noindex`; canonical pages are available for search indexing.
 
 Validation from the workspace root:
 
