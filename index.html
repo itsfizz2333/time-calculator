@@ -1,316 +1,155 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Time Calculator – Add or Subtract Days, Hours &amp; Minutes</title>
-  <meta name="description" content="Add or subtract days, hours, and minutes from any date and time. A fast, free time calculator designed to work in just a few taps.">
-  <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="theme-color" content="#3157d5">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>算到几点·时间接龙｜时间加减、累计与倒推计算</title>
+  <meta name="description" content="从现在或任意时间开始，逐段添加游泳、休息、吃饭、路程等时长，自动算出每一步和最终几点；也能倒推最晚出发时间。免费、免登录。">
+  <meta name="theme-color" content="#123c36">
+  <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://timecalc.top/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="assets/styles.css">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Time Calculator">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:title" content="Time Calculator – Add or Subtract Time">
-  <meta property="og:description" content="Add or subtract time in just a few taps. No sign-up and no time zone setup.">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:site_name" content="算到几点">
+  <meta property="og:title" content="算到几点 · 时间接龙">
+  <meta property="og:description" content="一段一段，算出最后到几点。支持正向、多段累计与倒推。">
   <meta property="og:url" content="https://timecalc.top/">
-  <meta property="og:image" content="https://timecalc.top/og.png">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:width" content="1731">
-  <meta property="og:image:height" content="909">
-  <meta property="og:image:alt" content="Time Calculator — add or subtract time in a few taps">
+  <meta property="og:image" content="https://timecalc.top/assets/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="算到几点 · 时间接龙：正向、累计与倒推时间">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Time Calculator – Add or Subtract Time">
-  <meta name="twitter:description" content="Add or subtract time in just a few taps. No sign-up and no time zone setup.">
-  <meta name="twitter:image" content="https://timecalc.top/og.png">
-  <meta name="twitter:image:alt" content="Time Calculator — add or subtract time in a few taps">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="twitter:image" content="https://timecalc.top/assets/og-card.png">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "@id": "https://timecalc.top/#webapplication",
-    "url": "https://timecalc.top/",
-    "name": "Time Calculator",
-    "description": "A free calculator for adding or subtracting days, hours, and minutes from a date and time.",
-    "applicationCategory": "UtilitiesApplication",
-    "operatingSystem": "Any",
-    "browserRequirements": "Requires JavaScript",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    }
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://timecalc.top/#website",
+        "url": "https://timecalc.top/",
+        "name": "算到几点",
+        "inLanguage": "zh-CN"
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://timecalc.top/#app",
+        "name": "算到几点 · 时间接龙",
+        "url": "https://timecalc.top/",
+        "description": "时间加减、多段累计与倒推计算工具。",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "inLanguage": "zh-CN",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "这个工具和普通时间计算器有什么不同？",
+            "acceptedAnswer": { "@type": "Answer", "text": "普通时间计算器通常只给出一道加减题的答案。时间接龙会保留每一段安排，并显示完整的起止时间和最终完成时间。" }
+          },
+          {
+            "@type": "Question",
+            "name": "计算跨过午夜会怎样？",
+            "acceptedAnswer": { "@type": "Answer", "text": "结果会继续计算，并明确标记昨天、今天或明天。例如23:40再过45分钟会显示为明天00:25。" }
+          },
+          {
+            "@type": "Question",
+            "name": "活动名称必须填写吗？",
+            "acceptedAnswer": { "@type": "Answer", "text": "不必。只填写时长也能计算；添加游泳、吃饭等名称只是为了让时间线更容易看懂。" }
+          }
+        ]
+      }
+    ]
   }
   </script>
 </head>
 <body>
-  <a class="skip-link" href="#calculator">Skip to calculator</a>
-
+  <a class="skip-link" href="#calculator">跳到计算器</a>
   <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="/" aria-label="Time Calculator home">
-        <span class="brand-mark" aria-hidden="true">
-          <span class="brand-hand"></span>
-        </span>
-        <span>Time Calculator</span>
-      </a>
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="/time-duration-calculator">Time Duration</a>
-        <a href="/time-from-now-calculator">Time From Now</a>
-        <a href="/hours-minutes-calculator">Hours &amp; Minutes</a>
-        <a href="#how-it-works">How it works</a>
-        <a href="#faq">FAQ</a>
-        <a href="/about">About</a>
+    <div class="site-header__inner">
+      <a class="brand" href="./" aria-label="算到几点首页"><span class="brand__mark" aria-hidden="true">◷</span><span>算到几点 <span class="brand__suffix">· 时间接龙</span></span></a>
+      <nav class="site-nav" aria-label="主要导航">
+        <a href="45-minutes-later/">时间加减</a>
+        <a href="time-chain-calculator/">多段累计</a>
+        <a class="nav-priority" href="leave-time-calculator/">倒推时间</a>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="切换深色模式">☾</button>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero container" aria-labelledby="page-title">
-      <p class="eyebrow">Free online tool</p>
-      <h1 id="page-title">Add or subtract time in a few taps</h1>
-      <p class="hero-copy">Start from now, choose a shortcut, and get the answer instantly. No sign-up or time zone setup.</p>
+  <div class="page-shell">
+    <section class="hero">
+      <p class="eyebrow">免费 · 免登录 · 本地计算</p>
+      <h1>一段一段，算出最后到几点</h1>
+      <p>从现在或任意时间开始，逐段添加游泳、休息、吃饭和路程。每一段何时开始、何时结束，以及全部完成的时间都会自动算好。</p>
+      <p class="hero__example">例如：17:00 游泳45分 → 休息15分 → 晚饭1小时 → 19:30 到家</p>
     </section>
 
-    <div class="container calculator-layout">
-      <section class="calculator-card" id="calculator" aria-label="Time calculator">
-        <div class="mode-switch" role="group" aria-label="Choose whether to add or subtract time">
-          <button class="mode-button is-active" type="button" data-mode="add" aria-pressed="true">
-            <span aria-hidden="true">＋</span>
-            Add time
-          </button>
-          <button class="mode-button" type="button" data-mode="subtract" aria-pressed="false">
-            <span aria-hidden="true">−</span>
-            Subtract time
-          </button>
-        </div>
+    <section class="tool-frame" id="calculator" aria-label="时间接龙计算器">
+      <div data-time-chain-app data-preset="home"></div>
+      <noscript><p class="noscript-note">计算器需要开启 JavaScript。示例：17:00 + 游泳45分钟 + 休息15分钟 + 晚饭60分钟 + 回家30分钟 = 19:30。</p></noscript>
+    </section>
 
-        <div class="calculator-section start-section">
-          <div class="section-heading">
-            <span class="section-label">Starting from</span>
-            <span class="section-note" id="start-summary">Local time</span>
-          </div>
-          <div class="choice-row" role="group" aria-label="Choose the starting date and time">
-            <button class="choice-button is-active" id="start-now" type="button" aria-pressed="true">
-              <span class="choice-icon" aria-hidden="true">◷</span>
-              Now
-            </button>
-            <button class="choice-button" id="start-custom" type="button" aria-pressed="false">
-              <span class="choice-icon" aria-hidden="true">▦</span>
-              Pick date &amp; time
-            </button>
-          </div>
-          <div class="date-time-fields" id="date-time-fields" hidden>
-            <label>
-              <span>Date</span>
-              <input type="date" id="start-date">
-            </label>
-            <label>
-              <span>Time</span>
-              <input type="time" id="start-time" step="60">
-            </label>
-          </div>
-        </div>
-
-        <div class="calculator-section">
-          <div class="section-heading">
-            <span class="section-label">How much time?</span>
-            <span class="section-note">Tap a shortcut</span>
-          </div>
-          <div class="quick-grid" role="group" aria-label="Common durations">
-            <button type="button" class="quick-button" data-days="0" data-minutes="15" aria-pressed="false">15 min</button>
-            <button type="button" class="quick-button" data-days="0" data-minutes="30" aria-pressed="false">30 min</button>
-            <button type="button" class="quick-button is-active" data-days="0" data-minutes="60" aria-pressed="true">1 hour</button>
-            <button type="button" class="quick-button" data-days="0" data-minutes="120" aria-pressed="false">2 hours</button>
-            <button type="button" class="quick-button" data-days="0" data-minutes="480" aria-pressed="false">8 hours</button>
-            <button type="button" class="quick-button" data-days="1" data-minutes="0" aria-pressed="false">1 day</button>
-          </div>
-        </div>
-
-        <details class="custom-duration">
-          <summary>
-            <span>Custom duration</span>
-            <span class="summary-hint">Days, hours &amp; minutes</span>
-          </summary>
-          <div class="stepper-grid">
-            <div class="stepper" data-unit="days">
-              <span class="stepper-label">Days</span>
-              <div class="stepper-controls">
-                <button type="button" data-step="-1" aria-label="Remove one day">−</button>
-                <input class="duration-input" id="days-value" type="number" inputmode="numeric" min="0" max="9999" step="1" value="0" data-unit="days" aria-label="Days">
-                <button type="button" data-step="1" aria-label="Add one day">＋</button>
-              </div>
-            </div>
-            <div class="stepper" data-unit="hours">
-              <span class="stepper-label">Hours</span>
-              <div class="stepper-controls">
-                <button type="button" data-step="-1" aria-label="Remove one hour">−</button>
-                <input class="duration-input" id="hours-value" type="number" inputmode="numeric" min="0" max="9999" step="1" value="1" data-unit="hours" aria-label="Hours">
-                <button type="button" data-step="1" aria-label="Add one hour">＋</button>
-              </div>
-            </div>
-            <div class="stepper" data-unit="minutes">
-              <span class="stepper-label">Minutes</span>
-              <div class="stepper-controls">
-                <button type="button" data-step="-5" aria-label="Remove five minutes">−</button>
-                <input class="duration-input" id="minutes-value" type="number" inputmode="numeric" min="0" max="9999" step="1" value="0" data-unit="minutes" aria-label="Minutes">
-                <button type="button" data-step="5" aria-label="Add five minutes">＋</button>
-              </div>
-            </div>
-          </div>
-          <p class="hold-hint">Tap, press and hold, or type any number — 90 minutes works.</p>
-        </details>
-
-        <section class="result-panel" aria-labelledby="result-heading" aria-live="polite" aria-atomic="true">
-          <p class="result-kicker" id="result-heading">One hour from now</p>
-          <output class="result-primary" id="result-primary">Loading local time…</output>
-          <p class="result-full" id="result-full"></p>
-          <div class="result-actions">
-            <button class="primary-button" id="copy-result" type="button">
-              <span aria-hidden="true">□</span>
-              <span class="copy-label">Copy result</span>
-            </button>
-            <button class="secondary-button" id="continue-result" type="button">
-              Continue from here
-              <span aria-hidden="true">→</span>
-            </button>
-          </div>
-        </section>
-
-        <p class="local-note">Uses the date and time on your device. No time zone conversion.</p>
-        <noscript><p class="noscript-message">JavaScript is required to use this calculator.</p></noscript>
-      </section>
-
-      <aside class="ad-slot ad-rail" aria-label="Advertisement">
-        <span>ADVERTISEMENT</span>
-        <strong>300 × 250</strong>
-      </aside>
-    </div>
-
-    <section class="content-section container" id="how-it-works" aria-labelledby="how-title">
-      <div class="section-intro">
-        <p class="eyebrow">How it works</p>
-        <h2 id="how-title">A simpler way to calculate time</h2>
-        <p>Choose whether to add or subtract, start from now or pick a date, then tap a duration. Your result updates immediately.</p>
-      </div>
-      <div class="steps-grid">
-        <article>
-          <span class="step-number">1</span>
-          <h3>Choose a direction</h3>
-          <p>Add time to find a future result, or subtract it to look back.</p>
-        </article>
-        <article>
-          <span class="step-number">2</span>
-          <h3>Tap a duration</h3>
-          <p>Use a popular shortcut or open custom duration for an exact amount.</p>
-        </article>
-        <article>
-          <span class="step-number">3</span>
-          <h3>Use the result</h3>
-          <p>Copy it, or continue calculating from the resulting date and time.</p>
-        </article>
+    <section class="content-section">
+      <p class="eyebrow">为什么更好用</p>
+      <h2>不只给一个答案，还把过程排清楚</h2>
+      <p>普通计算器适合一道加减题；真实生活往往是一串事情。时间接龙把它们放进同一条时间线，中间任何一步变化，后面的时间都会自动更新。</p>
+      <div class="feature-grid">
+        <article class="feature-card"><h3>正向累加</h3><p>选择现在或任意开始时间，连续添加多段活动，直接看到最终几点完成。</p></article>
+        <article class="feature-card"><h3>从目标倒推</h3><p>知道必须几点到达，就把路程、准备和预留时间加进去，倒推出最晚几点开始。</p></article>
+        <article class="feature-card"><h3>处理不确定性</h3><p>为某一段填写最短与最长用时，结果会显示完成窗口，而不是假装只有一个准确答案。</p></article>
       </div>
     </section>
 
-    <aside class="ad-slot ad-banner container" aria-label="Advertisement">
-      <span>ADVERTISEMENT</span>
-      <strong>Responsive banner</strong>
-    </aside>
-
-    <section class="content-section container popular-section" aria-labelledby="popular-title">
-      <div class="section-intro compact">
-        <p class="eyebrow">Popular calculations</p>
-        <h2 id="popular-title">Common time questions</h2>
-      </div>
-      <div class="popular-grid">
-        <a href="/time-from-now-calculator?minutes=480">What time is 8 hours from now?</a>
-        <button type="button" data-popular-mode="subtract" data-popular-days="0" data-popular-minutes="120">What time was it 2 hours ago?</button>
-        <a href="/time-from-now-calculator?minutes=45">What time will it be in 45 minutes?</a>
-        <a href="/time-from-now-calculator?days=7">What date is one week from now?</a>
+    <section class="content-section">
+      <p class="eyebrow">三个独立工具</p>
+      <h2>从一道题，到整条日程</h2>
+      <div class="link-grid">
+        <a class="link-card" href="45-minutes-later/"><h3>几分钟后是几点</h3><p>计算4:45再过45分钟、现在过2个半小时，支持跨午夜提示。</p><p class="link-card__arrow">打开时间加减 →</p></a>
+        <a class="link-card" href="time-chain-calculator/"><h3>多段时间累计</h3><p>把游泳、休息、晚饭和回家逐段加入，一次看清全部时间。</p><p class="link-card__arrow">打开多段累计 →</p></a>
+        <a class="link-card" href="leave-time-calculator/"><h3>最晚几点出发</h3><p>从到达时间倒推路程、停车、准备和缓冲，避免临出门再心算。</p><p class="link-card__arrow">打开倒推计算 →</p></a>
       </div>
     </section>
 
-    <section class="content-section container related-tool-section" aria-labelledby="more-tools-title">
-      <div class="section-intro compact">
-        <p class="eyebrow">More calculations</p>
-        <h2 id="more-tools-title">Choose the right time tool</h2>
-      </div>
-      <div class="related-tools-grid">
-        <a class="tool-link-card" href="/time-duration-calculator">
-          <span>
-            <strong>Find hours between two times</strong>
-            <span>Calculate elapsed time, overnight ranges, breaks, and decimal hours.</span>
-          </span>
-          <span class="tool-link-arrow" aria-hidden="true">&rarr;</span>
-        </a>
-        <a class="tool-link-card" href="/time-from-now-calculator">
-          <span>
-            <strong>What time will it be from now?</strong>
-            <span>Start with the current time and add minutes, hours, or days in one tap.</span>
-          </span>
-          <span class="tool-link-arrow" aria-hidden="true">→</span>
-        </a>
-        <a class="tool-link-card" href="/hours-minutes-calculator">
-          <span>
-            <strong>Add or subtract hours and minutes</strong>
-            <span>Combine elapsed durations and see H:MM, total minutes, and decimal hours.</span>
-          </span>
-          <span class="tool-link-arrow" aria-hidden="true">→</span>
-        </a>
+    <section class="content-section">
+      <p class="eyebrow">真实场景</p>
+      <h2>计划变了，也不用从头算</h2>
+      <div class="example-grid">
+        <article class="example-card"><h3>健身后几点到家</h3><p>17:00开始，游泳45分、休息15分、晚饭60分、回家30分。</p><p class="example-result">19:30</p></article>
+        <article class="example-card"><h3>23:40再过45分钟</h3><p>自动处理分钟进位与跨日，不会只显示一个容易看错的00:25。</p><p class="example-result">明天 00:25</p></article>
+        <article class="example-card"><h3>19:30前必须到达</h3><p>路程40分、停车10分、手续30分、预留15分，总计1小时35分。</p><p class="example-result">17:55 开始</p></article>
       </div>
     </section>
 
-    <section class="content-section container faq-section" id="faq" aria-labelledby="faq-title">
-      <div class="section-intro compact">
-        <p class="eyebrow">FAQ</p>
-        <h2 id="faq-title">Frequently asked questions</h2>
-      </div>
+    <section class="content-section">
+      <p class="eyebrow">常见问题</p>
+      <h2>关于时间接龙</h2>
       <div class="faq-list">
-        <details>
-          <summary>Can I add more than 24 hours?</summary>
-          <p>Yes. Open custom duration and add any combination of days, hours, and minutes.</p>
-        </details>
-        <details>
-          <summary>What happens when the result crosses midnight?</summary>
-          <p>The calculator automatically moves to the correct previous or next calendar date.</p>
-        </details>
-        <details>
-          <summary>Does this calculator support leap years?</summary>
-          <p>Yes. It uses your browser’s calendar system, including leap years and the correct number of days in each month.</p>
-        </details>
-        <details>
-          <summary>Does it convert between time zones?</summary>
-          <p>No. This version performs ordinary date and time calculations using your device’s local time.</p>
-        </details>
-        <details>
-          <summary>Are my dates and times saved?</summary>
-          <p>No. The calculation happens in your browser, and this version does not send or store the dates and times you enter.</p>
-        </details>
+        <details><summary>这个工具和普通时间计算器有什么不同？</summary><p>普通时间计算器通常只给出一道加减题的答案。时间接龙会保留每一段安排，并显示完整的起止时间和最终完成时间。</p></details>
+        <details><summary>计算跨过午夜会怎样？</summary><p>结果会继续计算，并明确标记昨天、今天或明天。例如23:40再过45分钟会显示为明天00:25。</p></details>
+        <details><summary>活动名称必须填写吗？</summary><p>不必。只填写时长也能计算；添加游泳、吃饭等名称只是为了让时间线更容易看懂。</p></details>
+        <details><summary>计划会上传到服务器吗？</summary><p>当前版本在浏览器本地计算和保存，不要求账号。分享时，计划写在链接的井号（#）后，普通网页请求不会把这部分发送给服务器。</p></details>
       </div>
     </section>
-  </main>
+  </div>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <a class="brand footer-brand" href="/">Time Calculator</a>
-        <p>Fast, focused date and time arithmetic.</p>
-      </div>
-      <nav aria-label="Footer navigation">
-        <a href="/time-duration-calculator">Time Duration</a>
-        <a href="/time-from-now-calculator">Time From Now</a>
-        <a href="/hours-minutes-calculator">Hours &amp; Minutes</a>
-        <a href="/about">About</a>
-        <a href="/privacy">Privacy</a>
-        <a href="/terms">Terms</a>
-      </nav>
-      <p class="copyright">© <span id="current-year">2026</span> Time Calculator</p>
+    <div class="site-footer__inner">
+      <div><strong>算到几点 · 时间接龙</strong><br>把时间安排得明明白白。</div>
+      <div class="footer-links"><a href="45-minutes-later/">时间加减</a><a href="time-chain-calculator/">多段累计</a><a href="leave-time-calculator/">倒推时间</a></div>
+      <div>© 2026 · 原型版</div>
     </div>
   </footer>
 
-  <script src="app.js" defer></script>
+  <script src="assets/config.js"></script>
+  <script src="assets/app.js"></script>
 </body>
 </html>
-

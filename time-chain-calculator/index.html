@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>多段时间累计计算器｜活动接龙算出最终几点</title>
+  <meta name="description" content="从任意时间开始，连续添加多个活动和时长，自动显示每段起止时间、总时长和最终结束时间；修改时长或顺序后全程重算。">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#123c36">
+  <link rel="canonical" href="https://timecalc.top/time-chain-calculator/">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/icon-192.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="stylesheet" href="../assets/styles.css">
+  <meta property="og:type" content="website"><meta property="og:locale" content="zh_CN"><meta property="og:site_name" content="算到几点">
+  <meta property="og:title" content="多段时间累计计算器"><meta property="og:description" content="逐段添加活动，自动算出每一步和最终几点。"><meta property="og:url" content="https://timecalc.top/time-chain-calculator/"><meta property="og:image" content="https://timecalc.top/assets/og-card.png">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"WebPage","name":"多段时间累计计算器","url":"https://timecalc.top/time-chain-calculator/","inLanguage":"zh-CN"},
+    {"@type":"WebApplication","name":"多段时间累计计算器","url":"https://timecalc.top/time-chain-calculator/","description":"连续增加活动和时长，计算每段起止时间与最终完成时间。","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","inLanguage":"zh-CN","offers":{"@type":"Offer","price":"0","priceCurrency":"CNY"}},
+    {"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://timecalc.top/"},{"@type":"ListItem","position":2,"name":"多段时间累计","item":"https://timecalc.top/time-chain-calculator/"}]},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"多段时间是怎样累计的？","acceptedAnswer":{"@type":"Answer","text":"每一段的结束时间会自动成为下一段的开始时间，因此无需手动复制上一次的结果。"}},
+      {"@type":"Question","name":"修改中间一段会影响后面的时间吗？","acceptedAnswer":{"@type":"Answer","text":"会。修改时长后，后续所有起止时间和最终时间都会自动更新。"}},
+      {"@type":"Question","name":"可以调整活动顺序吗？","acceptedAnswer":{"@type":"Answer","text":"可以。拖动或使用上下移动按钮改变顺序后，网站会按照新顺序重新计算整条时间线。"}}
+    ]}
+  ]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#calculator">跳到计算器</a>
+  <header class="site-header"><div class="site-header__inner"><a class="brand" href="../"><span class="brand__mark" aria-hidden="true">◷</span><span>算到几点 <span class="brand__suffix">· 时间接龙</span></span></a><nav class="site-nav" aria-label="主要导航"><a href="../45-minutes-later/">时间加减</a><a aria-current="page" href="./">多段累计</a><a class="nav-priority" href="../leave-time-calculator/">倒推时间</a><button class="theme-toggle" type="button" data-theme-toggle aria-label="切换深色模式">☾</button></nav></div></header>
+  <div class="page-shell">
+    <section class="hero"><p class="eyebrow">多段累计计算器</p><h1>一件接一件，最后是几点</h1><p>不用反复抄写上一段的结束时间。设置开始时间后，逐段增加活动和时长，系统会自动接成一条完整时间线。</p><p class="hero__example">17:00 游泳45分 → 休息15分 → 晚饭60分 → 回家30分 = 19:30</p></section>
+    <section class="tool-frame" id="calculator" aria-label="多段时间累计计算器"><div data-time-chain-app data-preset="home"></div><noscript><p class="noscript-note">计算器需要开启 JavaScript。示例：17:00开始，45 + 15 + 60 + 30分钟，最终是19:30。</p></noscript></section>
+    <section class="content-section"><p class="eyebrow">连续添加</p><h2>上一段结束，下一段自动开始</h2><p>例如从17:00开始游泳45分钟，17:45结束；休息15分钟，到18:00；晚饭1小时，到19:00；回家30分钟，最终19:30到家。系统同时保留中间过程、总时长和最终结果。</p><div class="example-grid"><article class="example-card"><h3>游泳</h3><p>17:00 开始 · 45分钟</p><p class="example-result">17:45</p></article><article class="example-card"><h3>休息 + 晚饭</h3><p>15分钟 + 60分钟</p><p class="example-result">19:00</p></article><article class="example-card"><h3>回家</h3><p>路上30分钟 · 总计150分钟</p><p class="example-result">19:30</p></article></div></section>
+    <section class="content-section"><p class="eyebrow">实时重算</p><h2>改一处，后面全部更新</h2><p>如果游泳延长10分钟，后面的休息、晚饭和到家时间会一起顺延。交换两个活动时，电脑可以拖动，手机和键盘可以使用上下移动按钮。</p><ul class="article-list"><li>健身、课程、约会、旅行和做饭流程都适用。</li><li>活动名称可以省略，只填写分钟也能计算。</li><li>某段时间不确定时，可以填写最短与最长用时，查看最终完成窗口。</li></ul></section>
+    <section class="content-section"><p class="eyebrow">常见问题</p><h2>多段累计问题</h2><div class="faq-list"><details><summary>多段时间是怎样累计的？</summary><p>每一段的结束时间会自动成为下一段的开始时间，因此无需手动复制上一次的结果。</p></details><details><summary>修改中间一段会影响后面的时间吗？</summary><p>会。修改时长后，后续所有起止时间和最终时间都会自动更新。</p></details><details><summary>可以调整活动顺序吗？</summary><p>可以。拖动或使用上下移动按钮改变顺序后，网站会按照新顺序重新计算整条时间线。</p></details></div></section>
+  </div>
+  <footer class="site-footer"><div class="site-footer__inner"><div><strong>算到几点</strong><br>免费时间计算工具</div><div class="footer-links"><a href="../">首页</a><a href="../45-minutes-later/">时间加减</a><a href="../leave-time-calculator/">倒推时间</a></div><div>© 2026 · 原型版</div></div></footer>
+  <script src="../assets/config.js"></script><script src="../assets/app.js"></script>
+</body>
+</html>
